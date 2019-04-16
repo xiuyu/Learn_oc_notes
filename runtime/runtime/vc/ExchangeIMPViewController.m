@@ -8,6 +8,7 @@
 
 #import "ExchangeIMPViewController.h"
 #import <objc/runtime.h>
+#import "NSArray+carsh.h"
 
 @interface ExchangeIMPViewController ()
 
@@ -20,6 +21,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    NSArray *array = @[@1,@5,@7];
+    
+    [array objectAtIndex:2];
+    
+    [array objectAtIndex:4];
 }
 
 +(void)load

@@ -7,6 +7,8 @@
 //
 
 #import "RefectViewController.h"
+#import "NSArray+carsh.h"
+#import "UIControl+Limit.h"
 
 @interface RefectViewController ()
 
@@ -20,14 +22,26 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *btn = [UIButton new];
-    btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 40)];
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 40)];
     [btn setTitle:@"点击跳转"forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [self.view addSubview:btn];
-    
     [btn addTarget:self action:@selector(btnHander:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    
+    
+    UIButton *limit_btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 250, 200, 40)];
+    [limit_btn setTitle:@"限制按钮点击次数" forState:UIControlStateNormal];
+    [limit_btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [self.view addSubview:limit_btn];
+    limit_btn.acceptEventInterval = 1;
+    [limit_btn addTarget:self action:@selector(limitHander) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+-(void)limitHander
+{
+    
+    
 }
 
 - (void)btnHander:(UIButton *)sender

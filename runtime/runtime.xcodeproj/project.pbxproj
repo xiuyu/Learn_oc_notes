@@ -23,6 +23,8 @@
 		C4F5A73D226575EA005F5A2E /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F5A73C226575EA005F5A2E /* People.m */; };
 		C4F5A74022657A37005F5A2E /* Fish.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F5A73F22657A37005F5A2E /* Fish.m */; };
 		C4F5A74322657C53005F5A2E /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F5A74222657C53005F5A2E /* Student.m */; };
+		C4F5A74A22658AFD005F5A2E /* NSArray+carsh.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F5A74922658AFD005F5A2E /* NSArray+carsh.m */; };
+		C4F5A74D2265ABDC005F5A2E /* UIControl+Limit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F5A74B2265ABDC005F5A2E /* UIControl+Limit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,10 @@
 		C4F5A73F22657A37005F5A2E /* Fish.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fish.m; sourceTree = "<group>"; };
 		C4F5A74122657C53005F5A2E /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		C4F5A74222657C53005F5A2E /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		C4F5A74822658AFD005F5A2E /* NSArray+carsh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+carsh.h"; sourceTree = "<group>"; };
+		C4F5A74922658AFD005F5A2E /* NSArray+carsh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+carsh.m"; sourceTree = "<group>"; };
+		C4F5A74B2265ABDC005F5A2E /* UIControl+Limit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Limit.m"; sourceTree = "<group>"; };
+		C4F5A74C2265ABDC005F5A2E /* UIControl+Limit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Limit.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		C4F5A6F12264D9AF005F5A2E /* runtime */ = {
 			isa = PBXGroup;
 			children = (
+				C4F5A74722658ADB005F5A2E /* category */,
 				C4F5A7252264D9F4005F5A2E /* other */,
 				C4F5A7242264D9E9005F5A2E /* vc */,
 				C4F5A6F22264D9AF005F5A2E /* AppDelegate.h */,
@@ -149,8 +156,6 @@
 		C4F5A7252264D9F4005F5A2E /* other */ = {
 			isa = PBXGroup;
 			children = (
-				C4F5A738226572FB005F5A2E /* NSObject+Pros.h */,
-				C4F5A739226572FB005F5A2E /* NSObject+Pros.m */,
 				C4F5A73B226575EA005F5A2E /* People.h */,
 				C4F5A73C226575EA005F5A2E /* People.m */,
 				C4F5A74122657C53005F5A2E /* Student.h */,
@@ -159,6 +164,19 @@
 				C4F5A73F22657A37005F5A2E /* Fish.m */,
 			);
 			path = other;
+			sourceTree = "<group>";
+		};
+		C4F5A74722658ADB005F5A2E /* category */ = {
+			isa = PBXGroup;
+			children = (
+				C4F5A74C2265ABDC005F5A2E /* UIControl+Limit.h */,
+				C4F5A74B2265ABDC005F5A2E /* UIControl+Limit.m */,
+				C4F5A738226572FB005F5A2E /* NSObject+Pros.h */,
+				C4F5A739226572FB005F5A2E /* NSObject+Pros.m */,
+				C4F5A74822658AFD005F5A2E /* NSArray+carsh.h */,
+				C4F5A74922658AFD005F5A2E /* NSArray+carsh.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F5A74A22658AFD005F5A2E /* NSArray+carsh.m in Sources */,
 				C4F5A74322657C53005F5A2E /* Student.m in Sources */,
 				C4F5A6F72264D9AF005F5A2E /* ViewController.m in Sources */,
 				C4F5A73A226572FB005F5A2E /* NSObject+Pros.m in Sources */,
@@ -239,6 +258,7 @@
 				C4F5A7022264D9B0005F5A2E /* main.m in Sources */,
 				C4F5A72B2264DB3A005F5A2E /* GetAllIvarViewController.m in Sources */,
 				C4F5A73D226575EA005F5A2E /* People.m in Sources */,
+				C4F5A74D2265ABDC005F5A2E /* UIControl+Limit.m in Sources */,
 				C4F5A7372264DB90005F5A2E /* MsgTransViewController.m in Sources */,
 				C4F5A7282264DB22005F5A2E /* ExchangeIMPViewController.m in Sources */,
 				C4F5A6F42264D9AF005F5A2E /* AppDelegate.m in Sources */,
