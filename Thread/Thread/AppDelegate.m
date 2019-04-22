@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  runtime
+//  Thread
 //
-//  Created by 丘秀玉 on 2019/4/15.
+//  Created by 丘秀玉 on 2019/4/22.
 //  Copyright © 2019 丘秀玉. All rights reserved.
 //
 
@@ -18,7 +18,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-   
     ViewController *vc = [[ViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     

@@ -58,15 +58,15 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzleSelector)
     
     [super viewWillAppear:animated];
     
-    NSLog(@"%s%@", __func__,NSStringFromClass([self class]));
+    NSLog(@"%s%@",__func__,NSStringFromSelector(_cmd));
 }
 
 -(void)swizzle_viewWillAppear:(BOOL)animated
 {
     //調用原方法
     [self swizzle_viewWillAppear:animated];
-    
-    NSLog(@"%s%@", __func__,NSStringFromClass([self class]));
+
+    NSLog(@"%s%@",__func__,NSStringFromSelector(_cmd));
 }
 
 /*
