@@ -25,6 +25,7 @@
 
 -(void)priority
 {
+    //优先倒置 低优先级的任务会因为各种原因先于高优先级任务执行
     dispatch_queue_t queue = dispatch_queue_create("com.queue", DISPATCH_QUEUE_CONCURRENT);
     
     //变更队列的执行优先级
