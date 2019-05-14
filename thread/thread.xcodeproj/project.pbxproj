@@ -94,17 +94,17 @@
 			isa = PBXGroup;
 			children = (
 				C47F6353227691E000DA4231 /* LockViewController.h */,
-				C47F6354227691E000DA4231 /* SemaphoreLockViewController.m */,
-				C47F6355227691E000DA4231 /* BaseViewController.m */,
-				C47F6356227691E000DA4231 /* PriorityViewController.m */,
-				C47F6357227691E000DA4231 /* DeadLockViewController.m */,
-				C47F6358227691E000DA4231 /* BarrierViewController.h */,
 				C47F6359227691E000DA4231 /* LockViewController.m */,
-				C47F635A227691E000DA4231 /* SemaphoreLockViewController.h */,
-				C47F635B227691E000DA4231 /* DeadLockViewController.h */,
-				C47F635C227691E000DA4231 /* PriorityViewController.h */,
 				C47F635D227691E000DA4231 /* BaseViewController.h */,
+				C47F6355227691E000DA4231 /* BaseViewController.m */,
+				C47F6357227691E000DA4231 /* DeadLockViewController.m */,
+				C47F635B227691E000DA4231 /* DeadLockViewController.h */,
+				C47F6358227691E000DA4231 /* BarrierViewController.h */,
 				C47F635E227691E000DA4231 /* BarrierViewController.m */,
+				C47F635A227691E000DA4231 /* SemaphoreLockViewController.h */,
+				C47F6354227691E000DA4231 /* SemaphoreLockViewController.m */,
+				C47F635C227691E000DA4231 /* PriorityViewController.h */,
+				C47F6356227691E000DA4231 /* PriorityViewController.m */,
 			);
 			path = vcs;
 			sourceTree = "<group>";
