@@ -28,7 +28,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.dataArray = @[@"冒泡（快）排序",@"插入排序",@"选择排序",@"semaphore加锁",@"lock加锁",@"死锁"];
+    self.dataArray = @[@"冒泡（快）排序",@"插入(希尔)排序",@"选择排序",@"semaphore加锁",@"lock加锁",@"死锁"];
     
     self.vcs = @[@"BubbleSortViewController",@"InsertSortViewController",@"SelectSortViewController",@"SemaphoreLockViewController",@"LockViewController",@"DeadLockViewController"];
     

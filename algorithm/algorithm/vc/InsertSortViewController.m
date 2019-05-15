@@ -26,7 +26,43 @@
     
     [self sort:array];
     
-//    [self sort2:array];
+    /*希尔排序是把记录按下标的一定增量分组，对每组使用直接插入排序算法排序；随着增量逐渐减少，每组包含的关键词越来越多，当增量减至1时，整个文件恰被分成一组，算法便终止。*/
+    NSMutableArray *arr = [[NSMutableArray alloc] initWithObjects:@(6), @(1), @(2), @(5), @(9), @(4), @(3), @(7), nil];
+    
+    [self shellSort:arr];
+    
+    NSLog(@"%@", arr);
+}
+
+/**
+ * 起始间隔值gap设置为总数的一半，直到gap==1结束
+ *在最坏的情况下时间复杂度仍为O(n²),而使用最优的增量在最坏的情况下却为O(n²⁄³)。
+ *增量序列的最后一个增量值必须等于1才行。
+ * 由于记录是跳跃式的移动，希尔排序并不是一种稳定的排序算法。
+ *  @param list list description
+ */
+- (void)shellSort:(NSMutableArray *)list
+{
+    int gap = (int)list.count / 2;
+    
+    while (gap >= 1) {
+        
+        for (int i = gap; i < [list count]; i++)
+        {
+            NSInteger temp = [[list objectAtIndex:i] intValue];
+            int j = i;
+            
+            while (j >= gap && temp < [[list objectAtIndex:(j - gap)] intValue]) {
+                
+                [list replaceObjectAtIndex:j withObject:[list objectAtIndex:j - gap]];
+                j -= gap;
+            }
+            
+            [list replaceObjectAtIndex:j withObject:[NSNumber numberWithInteger:temp]];
+        }
+        
+        gap = gap / 2;
+    }
 }
 
 /**
@@ -44,24 +80,19 @@
     for (int i = 1; i < ascendingArr.count; i++)
     {
         NSInteger temp = [ascendingArr[i] integerValue];
-
+        
         for (int j = i - 1; j >= 0; j--)
         {
             if (temp < [ascendingArr[j] integerValue])
             {
                 ascendingArr[j + 1] = ascendingArr[j];
                 ascendingArr[j] = [NSNumber numberWithInteger:temp];
-
             }
         }
     }
     
     NSLog(@"插入升序排序结果：%@", ascendingArr);
 }
-
-
-
-
 
 - (void)sort2:(NSMutableArray *)ascendingArr
 {
