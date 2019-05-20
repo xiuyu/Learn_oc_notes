@@ -2,8 +2,8 @@
 //  ViewController.m
 //  Thread
 //
-//  Created by 丘秀玉 on 2019/4/22.
-//  Copyright © 2019 丘秀玉. All rights reserved.
+//  Created by xiuyu on 2019/4/22.
+//  Copyright © 2019 xiuyu. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -28,9 +28,9 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.dataArray = @[@"基础",@"barrier",@"优先级",@"semaphore加锁",@"lock加锁",@"死锁"];
+    self.dataArray = @[@"基础",@"barrier",@"优先级",@"semaphore加锁",@"lock加锁",@"死锁",@"GCD任务取消"];
     
-    self.vcs = @[@"BaseViewController",@"BarrierViewController",@"PriorityViewController",@"SemaphoreLockViewController",@"LockViewController",@"DeadLockViewController"];
+    self.vcs = @[@"BaseViewController",@"BarrierViewController",@"PriorityViewController",@"SemaphoreLockViewController",@"LockViewController",@"DeadLockViewController",@"ThreadCancelViewController"];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
     self.tableView.delegate = self;

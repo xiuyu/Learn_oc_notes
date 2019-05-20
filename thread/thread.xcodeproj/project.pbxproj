@@ -19,6 +19,7 @@
 		C47F6362227691E000DA4231 /* DeadLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F6357227691E000DA4231 /* DeadLockViewController.m */; };
 		C47F6363227691E000DA4231 /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F6359227691E000DA4231 /* LockViewController.m */; };
 		C47F6364227691E000DA4231 /* BarrierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F635E227691E000DA4231 /* BarrierViewController.m */; };
+		C47F6468228D53B600DA4231 /* ThreadCancelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F6467228D53B600DA4231 /* ThreadCancelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		C47F635C227691E000DA4231 /* PriorityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityViewController.h; sourceTree = "<group>"; };
 		C47F635D227691E000DA4231 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		C47F635E227691E000DA4231 /* BarrierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrierViewController.m; sourceTree = "<group>"; };
+		C47F6466228D53B600DA4231 /* ThreadCancelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadCancelViewController.h; sourceTree = "<group>"; };
+		C47F6467228D53B600DA4231 /* ThreadCancelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadCancelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,18 +96,20 @@
 		C47F6352227691E000DA4231 /* vcs */ = {
 			isa = PBXGroup;
 			children = (
-				C47F6353227691E000DA4231 /* LockViewController.h */,
-				C47F6359227691E000DA4231 /* LockViewController.m */,
 				C47F635D227691E000DA4231 /* BaseViewController.h */,
 				C47F6355227691E000DA4231 /* BaseViewController.m */,
-				C47F6357227691E000DA4231 /* DeadLockViewController.m */,
 				C47F635B227691E000DA4231 /* DeadLockViewController.h */,
+				C47F6357227691E000DA4231 /* DeadLockViewController.m */,
 				C47F6358227691E000DA4231 /* BarrierViewController.h */,
 				C47F635E227691E000DA4231 /* BarrierViewController.m */,
+				C47F6353227691E000DA4231 /* LockViewController.h */,
+				C47F6359227691E000DA4231 /* LockViewController.m */,
 				C47F635A227691E000DA4231 /* SemaphoreLockViewController.h */,
 				C47F6354227691E000DA4231 /* SemaphoreLockViewController.m */,
 				C47F635C227691E000DA4231 /* PriorityViewController.h */,
 				C47F6356227691E000DA4231 /* PriorityViewController.m */,
+				C47F6466228D53B600DA4231 /* ThreadCancelViewController.h */,
+				C47F6467228D53B600DA4231 /* ThreadCancelViewController.m */,
 			);
 			path = vcs;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				C47F6362227691E000DA4231 /* DeadLockViewController.m in Sources */,
 				C47F63412276910300DA4231 /* ViewController.m in Sources */,
 				C47F634C2276910400DA4231 /* main.m in Sources */,
+				C47F6468228D53B600DA4231 /* ThreadCancelViewController.m in Sources */,
 				C47F6361227691E000DA4231 /* PriorityViewController.m in Sources */,
 				C47F633E2276910300DA4231 /* AppDelegate.m in Sources */,
 				C47F6363227691E000DA4231 /* LockViewController.m in Sources */,
