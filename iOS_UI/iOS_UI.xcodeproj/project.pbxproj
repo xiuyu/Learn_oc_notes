@@ -24,6 +24,7 @@
 		C426D564229290DF00096785 /* MyCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D562229290DD00096785 /* MyCodeTool.m */; };
 		C426D56822929C9800096785 /* PayView.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D56722929C9800096785 /* PayView.m */; };
 		C426D56C2292A1F700096785 /* MyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D56B2292A1F700096785 /* MyTextField.m */; };
+		C426D5722293A1F900096785 /* UIView+PlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D5712293A1F900096785 /* UIView+PlaceholderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		C426D56722929C9800096785 /* PayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayView.m; sourceTree = "<group>"; };
 		C426D56A2292A1F700096785 /* MyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextField.h; sourceTree = "<group>"; };
 		C426D56B2292A1F700096785 /* MyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextField.m; sourceTree = "<group>"; };
+		C426D5702293A1F900096785 /* UIView+PlaceholderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+PlaceholderView.h"; sourceTree = "<group>"; };
+		C426D5712293A1F900096785 /* UIView+PlaceholderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+PlaceholderView.m"; sourceTree = "<group>"; };
 		FC1396B912FD6D1ACFB32E9B /* libPods-iOS_UI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS_UI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,6 +140,8 @@
 				C426D49722927F4600096785 /* MarqueeViewCell.m */,
 				C426D56622929C9800096785 /* PayView.h */,
 				C426D56722929C9800096785 /* PayView.m */,
+				C426D5702293A1F900096785 /* UIView+PlaceholderView.h */,
+				C426D5712293A1F900096785 /* UIView+PlaceholderView.m */,
 			);
 			path = "项目封装";
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C426D4A722927F7000096785 /* ViewController.m in Sources */,
+				C426D5722293A1F900096785 /* UIView+PlaceholderView.m in Sources */,
 				C426D49D22927F4600096785 /* AlertView.m in Sources */,
 				C426D4A422927F5300096785 /* UIView+frameAdjust.m in Sources */,
 				C426D49E22927F4600096785 /* ScrollViewMenuItem.m in Sources */,

@@ -54,7 +54,6 @@
         button.tag = i;
         [button addTarget:self action:@selector(itemClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
-        
         button.frame = CGRectMake(i * width, y, width, height);
         
         if (i == 0)

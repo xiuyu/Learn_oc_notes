@@ -14,6 +14,7 @@
 #import "MarqueeView.h"
 #import "AdjustImageButton.h"
 #import "PayView.h"
+#import "UIView+PlaceholderView.h"
 
 @interface ViewController ()<SearchHistoryViewDelegate,ScrollViewMenuItemDelegate>
 
@@ -45,7 +46,7 @@
     [self.view addSubview:h];
     
     ScrollViewMenuItem *i = [[ScrollViewMenuItem alloc] initWithFrame:CGRectMake(0, 300, ScreenWidth, 44)];
-    i.titleArray = @[@"生活服务",@"政务服务",@"社区服务",@"健康服务",@"生活服务",@"政务服务",@"社区服务",@"健康服务"];
+    i.titleArray = @[@"生活服务生活服务生活服务",@"政务服务",@"社区服务",@"健康服务",@"生活服务",@"政务服务",@"社区服务",@"健康服务"];
     [i scrollMenuItemIndex:2];
     i.menuDelegate = self;
     [self.view addSubview:i];
@@ -57,30 +58,18 @@
     [self.view addSubview:m];
     
     
- 
-    UIStackView *stackview = [[UIStackView alloc] initWithFrame:CGRectMake(0, 600, ScreenWidth, 44)];
-    stackview.spacing = 10;
-    stackview.axis = UILayoutConstraintAxisHorizontal;
-    stackview.distribution = UIStackViewDistributionFillEqually;
-    stackview.alignment = UIStackViewAlignmentCenter;
-    [self.view addSubview:stackview];
+    UIImage *img = nil ;
     
-    for (int i = 0; i < 4; i++) {
-        
-        UIButton *button = [[UIButton alloc] init];
-        [button setTitle:[NSString stringWithFormat:@"button %d",i] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [stackview addArrangedSubview:button];
-        [button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.equalTo(button.mas_width);
-        }];
-    }
-
+    [img resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
+    
 }
 
 -(void)searchHistoryWiew:(SearchHistoryView *)searchView clickedButtonAtIndex:(NSInteger)index
 {
     NSLog(@"点击的：%ld",index);
+    [PayView showPayViewWithTitle:nil buttonClickBolck:^(NSInteger index, NSString *pwd) {
+        NSLog(@"支付密码：%@",pwd);
+    }];
 }
 
 -(void)scrollViewMenuItem:(ScrollViewMenuItem *)menuItem clickButtonIndex:(NSInteger)index
@@ -92,5 +81,7 @@
 {
     [AlertView showWithTitle:@"标题" content:@"内容" buttionTitles:@[@"确定",@"取消"] buttonClickBlock:nil];
 }
+
+
 
 @end
