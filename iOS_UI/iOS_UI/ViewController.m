@@ -16,6 +16,7 @@
 #import "PayView.h"
 #import "UIView+PlaceholderView.h"
 
+
 @interface ViewController ()<SearchHistoryViewDelegate,ScrollViewMenuItemDelegate>
 
 @end
@@ -44,24 +45,23 @@
     h.titleArray =@[@"账单",@"这是一条测试文案宽度的文案到底有多长呢",@"高度限定",@"emoji",@"这是一条测试文案宽度的文案，当文案超过一行显示的时候显示为",@"这是二条测试文案宽度的文案，当文案超过一行显示的时候显示为"];
     h.delegate = self;
     [self.view addSubview:h];
-    
+
     ScrollViewMenuItem *i = [[ScrollViewMenuItem alloc] initWithFrame:CGRectMake(0, 300, ScreenWidth, 44)];
-    i.titleArray = @[@"生活服务生活服务生活服务",@"政务服务",@"社区服务",@"健康服务",@"生活服务",@"政务服务",@"社区服务",@"健康服务"];
+    i.titleArray = @[@"生活服务",@"政务服务",@"社区服务",@"健康服务",@"生活服务",@"政务服务",@"社区服务",@"健康服务"];
     [i scrollMenuItemIndex:2];
     i.menuDelegate = self;
     [self.view addSubview:i];
-    
-  
-    
+
     MarqueeView *m = [[MarqueeView alloc] initWithFrame:CGRectMake(0, 500, ScreenWidth, 44)];
     m.titleArray = @[@"区住房建设局加大对商品房预售款监",@"番禺区青年学习宣传贯彻习近平新时",@"123",@"456"];
     [self.view addSubview:m];
-    
-    
-    UIImage *img = nil ;
-    
-    [img resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0) resizingMode:UIImageResizingModeStretch];
-    
+
+   
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 -(void)searchHistoryWiew:(SearchHistoryView *)searchView clickedButtonAtIndex:(NSInteger)index
@@ -75,6 +75,9 @@
 -(void)scrollViewMenuItem:(ScrollViewMenuItem *)menuItem clickButtonIndex:(NSInteger)index
 {
     NSLog(@"scrollitem %ld",index);
+    [self.view showPlaceholderWithType:PlaceholderViewNoNetWork buttonClickBlock:^{
+        
+    }];
 }
 
 - (void)click

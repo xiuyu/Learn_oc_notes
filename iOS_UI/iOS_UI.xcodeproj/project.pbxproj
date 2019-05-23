@@ -25,6 +25,14 @@
 		C426D56822929C9800096785 /* PayView.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D56722929C9800096785 /* PayView.m */; };
 		C426D56C2292A1F700096785 /* MyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D56B2292A1F700096785 /* MyTextField.m */; };
 		C426D5722293A1F900096785 /* UIView+PlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D5712293A1F900096785 /* UIView+PlaceholderView.m */; };
+		C49446F3229544C800F6DBB9 /* TextFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49446F2229544C800F6DBB9 /* TextFadeView.m */; };
+		C49446F622954E9A00F6DBB9 /* DrawCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49446F522954E9A00F6DBB9 /* DrawCurveView.m */; };
+		C49446F92295551400F6DBB9 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49446F82295551400F6DBB9 /* DrawLineView.m */; };
+		C49446FF22963C3600F6DBB9 /* IrregularLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49446FE22963C3600F6DBB9 /* IrregularLabelView.m */; };
+		C494470222964D2800F6DBB9 /* HeartLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C494470122964D2800F6DBB9 /* HeartLineView.m */; };
+		C49447052296792100F6DBB9 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49447042296792100F6DBB9 /* DrawViewController.m */; };
+		C494470822967DEB00F6DBB9 /* IncisionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = C494470722967DEB00F6DBB9 /* IncisionAnimate.m */; };
+		C494470B2296825600F6DBB9 /* DrawMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C494470A2296825600F6DBB9 /* DrawMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +70,22 @@
 		C426D56B2292A1F700096785 /* MyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextField.m; sourceTree = "<group>"; };
 		C426D5702293A1F900096785 /* UIView+PlaceholderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+PlaceholderView.h"; sourceTree = "<group>"; };
 		C426D5712293A1F900096785 /* UIView+PlaceholderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+PlaceholderView.m"; sourceTree = "<group>"; };
+		C49446F1229544C800F6DBB9 /* TextFadeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFadeView.h; sourceTree = "<group>"; };
+		C49446F2229544C800F6DBB9 /* TextFadeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFadeView.m; sourceTree = "<group>"; };
+		C49446F422954E9A00F6DBB9 /* DrawCurveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawCurveView.h; sourceTree = "<group>"; };
+		C49446F522954E9A00F6DBB9 /* DrawCurveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawCurveView.m; sourceTree = "<group>"; };
+		C49446F72295551400F6DBB9 /* DrawLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawLineView.h; sourceTree = "<group>"; };
+		C49446F82295551400F6DBB9 /* DrawLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawLineView.m; sourceTree = "<group>"; };
+		C49446FD22963C3600F6DBB9 /* IrregularLabelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IrregularLabelView.h; sourceTree = "<group>"; };
+		C49446FE22963C3600F6DBB9 /* IrregularLabelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IrregularLabelView.m; sourceTree = "<group>"; };
+		C494470022964D2800F6DBB9 /* HeartLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartLineView.h; sourceTree = "<group>"; };
+		C494470122964D2800F6DBB9 /* HeartLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeartLineView.m; sourceTree = "<group>"; };
+		C49447032296792100F6DBB9 /* DrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
+		C49447042296792100F6DBB9 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
+		C494470622967DEB00F6DBB9 /* IncisionAnimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncisionAnimate.h; sourceTree = "<group>"; };
+		C494470722967DEB00F6DBB9 /* IncisionAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncisionAnimate.m; sourceTree = "<group>"; };
+		C49447092296825600F6DBB9 /* DrawMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawMenuView.h; sourceTree = "<group>"; };
+		C494470A2296825600F6DBB9 /* DrawMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawMenuView.m; sourceTree = "<group>"; };
 		FC1396B912FD6D1ACFB32E9B /* libPods-iOS_UI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS_UI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +131,7 @@
 		C426D47A22927E5600096785 /* iOS_UI */ = {
 			isa = PBXGroup;
 			children = (
+				C49446ED2295369700F6DBB9 /* draw */,
 				C426D49122927F4600096785 /* 项目封装 */,
 				C426D4A8229283B900096785 /* button */,
 				C426D5692292A1E200096785 /* 继承 */,
@@ -116,6 +141,8 @@
 				C426D47C22927E5600096785 /* AppDelegate.m */,
 				C426D4A522927F6F00096785 /* ViewController.h */,
 				C426D4A622927F7000096785 /* ViewController.m */,
+				C49447032296792100F6DBB9 /* DrawViewController.h */,
+				C49447042296792100F6DBB9 /* DrawViewController.m */,
 				C426D48122927E5600096785 /* Main.storyboard */,
 				C426D48422927E5700096785 /* Assets.xcassets */,
 				C426D48622927E5700096785 /* LaunchScreen.storyboard */,
@@ -180,6 +207,27 @@
 				C426D56B2292A1F700096785 /* MyTextField.m */,
 			);
 			path = "继承";
+			sourceTree = "<group>";
+		};
+		C49446ED2295369700F6DBB9 /* draw */ = {
+			isa = PBXGroup;
+			children = (
+				C49446F1229544C800F6DBB9 /* TextFadeView.h */,
+				C49446F2229544C800F6DBB9 /* TextFadeView.m */,
+				C49446FD22963C3600F6DBB9 /* IrregularLabelView.h */,
+				C49446FE22963C3600F6DBB9 /* IrregularLabelView.m */,
+				C49446F422954E9A00F6DBB9 /* DrawCurveView.h */,
+				C49446F522954E9A00F6DBB9 /* DrawCurveView.m */,
+				C494470622967DEB00F6DBB9 /* IncisionAnimate.h */,
+				C494470722967DEB00F6DBB9 /* IncisionAnimate.m */,
+				C49446F72295551400F6DBB9 /* DrawLineView.h */,
+				C49446F82295551400F6DBB9 /* DrawLineView.m */,
+				C494470022964D2800F6DBB9 /* HeartLineView.h */,
+				C494470122964D2800F6DBB9 /* HeartLineView.m */,
+				C49447092296825600F6DBB9 /* DrawMenuView.h */,
+				C494470A2296825600F6DBB9 /* DrawMenuView.m */,
+			);
+			path = draw;
 			sourceTree = "<group>";
 		};
 		DA5592B5423E5EFD2A849701 /* Frameworks */ = {
@@ -287,12 +335,20 @@
 				C426D49D22927F4600096785 /* AlertView.m in Sources */,
 				C426D4A422927F5300096785 /* UIView+frameAdjust.m in Sources */,
 				C426D49E22927F4600096785 /* ScrollViewMenuItem.m in Sources */,
+				C49446FF22963C3600F6DBB9 /* IrregularLabelView.m in Sources */,
 				C426D4A022927F4600096785 /* MarqueeView.m in Sources */,
 				C426D48B22927E5700096785 /* main.m in Sources */,
 				C426D47D22927E5600096785 /* AppDelegate.m in Sources */,
+				C494470822967DEB00F6DBB9 /* IncisionAnimate.m in Sources */,
+				C49446F622954E9A00F6DBB9 /* DrawCurveView.m in Sources */,
+				C494470222964D2800F6DBB9 /* HeartLineView.m in Sources */,
 				C426D49F22927F4600096785 /* SearchHistoryView.m in Sources */,
+				C49446F3229544C800F6DBB9 /* TextFadeView.m in Sources */,
 				C426D4AB2292844200096785 /* AdjustImageButton.m in Sources */,
+				C494470B2296825600F6DBB9 /* DrawMenuView.m in Sources */,
+				C49446F92295551400F6DBB9 /* DrawLineView.m in Sources */,
 				C426D56822929C9800096785 /* PayView.m in Sources */,
+				C49447052296792100F6DBB9 /* DrawViewController.m in Sources */,
 				C426D564229290DF00096785 /* MyCodeTool.m in Sources */,
 				C426D49C22927F4600096785 /* MarqueeViewCell.m in Sources */,
 				C426D56C2292A1F700096785 /* MyTextField.m in Sources */,

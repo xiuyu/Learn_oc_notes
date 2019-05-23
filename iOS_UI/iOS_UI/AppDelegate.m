@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "DrawViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UINavigationController *package = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    package.title = @"项目封装";
+    
+    UINavigationController *draw = [[UINavigationController alloc] initWithRootViewController:[[DrawViewController alloc] init]];
+    draw.title = @"draw";
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[draw,package];
+    
+    self.window.rootViewController = self.tabBarController;
+    [self.window makeKeyAndVisible];
+    [self.window makeKeyWindow];
+    
     return YES;
 }
 
