@@ -75,14 +75,16 @@
 -(void)scrollViewMenuItem:(ScrollViewMenuItem *)menuItem clickButtonIndex:(NSInteger)index
 {
     NSLog(@"scrollitem %ld",index);
-    [self.view showPlaceholderWithType:PlaceholderViewNoNetWork buttonClickBlock:^{
-        
-    }];
+   
 }
 
 - (void)click
 {
     [AlertView showWithTitle:@"标题" content:@"内容" buttionTitles:@[@"确定",@"取消"] buttonClickBlock:nil];
+    
+    [self.view showPlaceholderWithType:PlaceholderViewNoNetWork buttonClickBlock:^{
+        
+    }];
 }
 
 

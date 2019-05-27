@@ -2,7 +2,7 @@
 //  DrawViewController.m
 //  iOS_UI
 //
-//  Created by 丘秀玉 on 2019/5/23.
+//  Created by xiuyu on 2019/5/23.
 //  Copyright © 2019 xiuyu. All rights reserved.
 //
 
@@ -54,6 +54,7 @@
     
     [label.layer addAnimation:animate forKey:nil];
     
+    
     //彩色文字
     CAGradientLayer *gradient = [[CAGradientLayer alloc] init];
     gradient.frame = CGRectMake(100, 650, 150, 30);
@@ -81,6 +82,7 @@
 -(void)drawMenuView:(DrawMenuView *)menuView clickMenuItem:(NSInteger)index
 {
     NSLog(@"menu click index %ld",index);
+    [menuView removeFromSuperview];
 }
 
 - (void)initDraw

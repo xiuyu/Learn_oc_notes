@@ -40,6 +40,10 @@
     CGFloat labelHeight = 30;
     //文本内间距
     CGFloat labelIterval = 30;
+    //文本高度间距
+    CGFloat heightInterval = 10;
+    
+    UIFont *font = [UIFont systemFontOfSize:13];
     
     
     for (int i = 0; i < _titleArray.count; i++)
@@ -50,12 +54,13 @@
         button.backgroundColor = [[UIColor lightGrayColor] colorWithAlphaComponent:0.1];
         button.layer.cornerRadius = 2;
         button.tag = i;
+        button.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-        [button.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [button.titleLabel setFont:font];
         [self addSubview:button];
         
-        NSDictionary *dic = @{NSFontAttributeName : [UIFont systemFontOfSize:13.f]};
+        NSDictionary *dic = @{NSFontAttributeName : font};
         
         CGSize size = [title boundingRectWithSize:CGSizeMake(MAXFLOAT, labelHeight) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dic context:nil].size;
         
@@ -67,6 +72,7 @@
                 CGSize s = size;
                 s.width = ScreenWidth - 2 * startX - labelIterval;
                 size = s;
+                button.titleEdgeInsets = UIEdgeInsetsMake(0, 10 , 0, 10);
             }
             
             lastX = startX;
@@ -75,7 +81,7 @@
         
         /**计算位置*/
         CGFloat x = lastX;
-        CGFloat y = currentRow * (labelHeight + 10);
+        CGFloat y = currentRow * (labelHeight + heightInterval);
         CGFloat width = size.width + labelIterval;
         CGFloat height = labelHeight;
         

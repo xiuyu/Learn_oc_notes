@@ -19,6 +19,9 @@
     Method toMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(swizzle_objectAtIndex:));
     
     method_exchangeImplementations(fromMethod, toMethod);
+    
+   
+    
 }
 
 - (id)swizzle_objectAtIndex:(NSInteger)index

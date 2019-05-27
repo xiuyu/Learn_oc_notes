@@ -2,7 +2,7 @@
 //  DrawMenuView.m
 //  iOS_UI
 //
-//  Created by 丘秀玉 on 2019/5/23.
+//  Created by xiuyu on 2019/5/23.
 //  Copyright © 2019 xiuyu. All rights reserved.
 //
 
@@ -35,19 +35,24 @@
     
     UIBezierPath *bezier = [UIBezierPath bezierPath];
     
+    //七点 圆弧
     [bezier moveToPoint:CGPointMake(0, 5)];
     [bezier addQuadCurveToPoint:CGPointMake(5, 0) controlPoint:CGPointMake(0, 0)];
     
+    //尖三角形
     [bezier addLineToPoint:CGPointMake(width / 2 - 5 + 20, 0)];
     [bezier addLineToPoint:CGPointMake(width / 2 + 20, -5)];
     [bezier addLineToPoint:CGPointMake(width / 2 + 20 + 5, 0)];
     
+    //圆弧
     [bezier addLineToPoint:CGPointMake(width - 5, 0)];
     [bezier addQuadCurveToPoint:CGPointMake(width, 5) controlPoint:CGPointMake(width, 0)];
     
+    //右下方圆弧
     [bezier addLineToPoint:CGPointMake(width, height - 5)];
     [bezier addQuadCurveToPoint:CGPointMake(width - 5, height) controlPoint:CGPointMake(width, height)];
     
+    //左下方圆弧
     [bezier addLineToPoint:CGPointMake(5, height)];
     [bezier addQuadCurveToPoint:CGPointMake(0, height - 5) controlPoint:CGPointMake(0, height)];
     
@@ -57,7 +62,6 @@
     layer.lineWidth = 1;
     layer.strokeColor = [UIColor clearColor].CGColor;
     layer.fillColor = [UIColor orangeColor].CGColor;
-    
     layer.path = bezier.CGPath;
     [self.layer addSublayer:layer];
     
@@ -110,9 +114,6 @@
 {
     if ([self.delegate respondsToSelector:@selector(drawMenuView:clickMenuItem:)]) {
         [self.delegate drawMenuView:self clickMenuItem:sender.tag];
-        
-        [self removeAllSubviews];
-        [self.layer removeAllSublayers];
     }
 }
 

@@ -2,7 +2,7 @@
 //  UIView+PlaceholderView.m
 //  iOS_UI
 //
-//  Created by 丘秀玉 on 2019/5/21.
+//  Created by xiuyu on 2019/5/21.
 //  Copyright © 2019 xiuyu. All rights reserved.
 //
 
