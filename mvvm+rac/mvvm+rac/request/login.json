@@ -1,0 +1,10 @@
+{
+    "code": 0,
+    "message": "ok",
+    "data": {
+        "userId": "14322454",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+        "refreshCode": "1234567890123456789012345678901234567890",
+        "expiresAt": 4325435354
+    }
+}

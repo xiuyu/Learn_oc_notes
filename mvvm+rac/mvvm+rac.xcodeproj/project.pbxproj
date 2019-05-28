@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B48E541DCF8A03F786B601E6 /* libPods-mvvm+rac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1BA9A55E92418ADD8A8CF5 /* libPods-mvvm+rac.a */; };
+		C46F2A8B229CE4E4000F5367 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C46F2A8A229CE4E4000F5367 /* Utils.m */; };
+		C473831D229CCB99000328A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C473831C229CCB99000328A8 /* AppDelegate.m */; };
+		C4738320229CCB99000328A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C473831F229CCB99000328A8 /* ViewController.m */; };
+		C4738323229CCB99000328A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4738321229CCB99000328A8 /* Main.storyboard */; };
+		C4738325229CCB9B000328A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4738324229CCB9B000328A8 /* Assets.xcassets */; };
+		C4738328229CCB9B000328A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4738326229CCB9B000328A8 /* LaunchScreen.storyboard */; };
+		C473832B229CCB9B000328A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C473832A229CCB9B000328A8 /* main.m */; };
+		C4738335229CCDA6000328A8 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4738334229CCDA6000328A8 /* LoginViewModel.m */; };
+		C4738338229CCDBA000328A8 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4738337229CCDBA000328A8 /* LoginModel.m */; };
+		C4BA4D47229D35AE00595D61 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = C4BA4D46229D35AE00595D61 /* login.json */; };
+		C4BA4D4B229D365B00595D61 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA4D4A229D365B00595D61 /* Request.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1048FD383D6E9E6F94E10806 /* Pods-mvvm+rac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm+rac.release.xcconfig"; path = "Pods/Target Support Files/Pods-mvvm+rac/Pods-mvvm+rac.release.xcconfig"; sourceTree = "<group>"; };
+		49F6BCED493ABBEBC09333F0 /* Pods-mvvm+rac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm+rac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mvvm+rac/Pods-mvvm+rac.debug.xcconfig"; sourceTree = "<group>"; };
+		BF1BA9A55E92418ADD8A8CF5 /* libPods-mvvm+rac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mvvm+rac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46F2A89229CE4E4000F5367 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		C46F2A8A229CE4E4000F5367 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		C4738318229CCB99000328A8 /* mvvm+rac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm+rac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C473831B229CCB99000328A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C473831C229CCB99000328A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C473831E229CCB99000328A8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C473831F229CCB99000328A8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C4738322229CCB99000328A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4738324229CCB9B000328A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4738327229CCB9B000328A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4738329229CCB9B000328A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C473832A229CCB9B000328A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C4738333229CCDA6000328A8 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		C4738334229CCDA6000328A8 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		C4738336229CCDBA000328A8 /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		C4738337229CCDBA000328A8 /* LoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		C4BA4D46229D35AE00595D61 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
+		C4BA4D49229D365B00595D61 /* Request.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
+		C4BA4D4A229D365B00595D61 /* Request.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4738315229CCB99000328A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B48E541DCF8A03F786B601E6 /* libPods-mvvm+rac.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F0CB3484FC0C634CDCA2115 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF1BA9A55E92418ADD8A8CF5 /* libPods-mvvm+rac.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CA9E3B35FD3520C607319AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49F6BCED493ABBEBC09333F0 /* Pods-mvvm+rac.debug.xcconfig */,
+				1048FD383D6E9E6F94E10806 /* Pods-mvvm+rac.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C46F2A88229CE4CF000F5367 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				C46F2A89229CE4E4000F5367 /* Utils.h */,
+				C46F2A8A229CE4E4000F5367 /* Utils.m */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		C473830F229CCB99000328A8 = {
+			isa = PBXGroup;
+			children = (
+				C473831A229CCB99000328A8 /* mvvm+rac */,
+				C4738319229CCB99000328A8 /* Products */,
+				9CA9E3B35FD3520C607319AA /* Pods */,
+				3F0CB3484FC0C634CDCA2115 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C4738319229CCB99000328A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4738318229CCB99000328A8 /* mvvm+rac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C473831A229CCB99000328A8 /* mvvm+rac */ = {
+			isa = PBXGroup;
+			children = (
+				C46F2A88229CE4CF000F5367 /* util */,
+				C4BA4D48229D35EA00595D61 /* request */,
+				C4738339229CCDC4000328A8 /* login */,
+				C473831B229CCB99000328A8 /* AppDelegate.h */,
+				C473831C229CCB99000328A8 /* AppDelegate.m */,
+				C473831E229CCB99000328A8 /* ViewController.h */,
+				C473831F229CCB99000328A8 /* ViewController.m */,
+				C4738321229CCB99000328A8 /* Main.storyboard */,
+				C4738324229CCB9B000328A8 /* Assets.xcassets */,
+				C4738326229CCB9B000328A8 /* LaunchScreen.storyboard */,
+				C4738329229CCB9B000328A8 /* Info.plist */,
+				C473832A229CCB9B000328A8 /* main.m */,
+			);
+			path = "mvvm+rac";
+			sourceTree = "<group>";
+		};
+		C4738339229CCDC4000328A8 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				C4738333229CCDA6000328A8 /* LoginViewModel.h */,
+				C4738334229CCDA6000328A8 /* LoginViewModel.m */,
+				C4738336229CCDBA000328A8 /* LoginModel.h */,
+				C4738337229CCDBA000328A8 /* LoginModel.m */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		C4BA4D48229D35EA00595D61 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				C4BA4D46229D35AE00595D61 /* login.json */,
+				C4BA4D49229D365B00595D61 /* Request.h */,
+				C4BA4D4A229D365B00595D61 /* Request.m */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4738317229CCB99000328A8 /* mvvm+rac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C473832E229CCB9B000328A8 /* Build configuration list for PBXNativeTarget "mvvm+rac" */;
+			buildPhases = (
+				3DC43F07E8DAB6F32A74DE45 /* [CP] Check Pods Manifest.lock */,
+				C4738314229CCB99000328A8 /* Sources */,
+				C4738315229CCB99000328A8 /* Frameworks */,
+				C4738316229CCB99000328A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mvvm+rac";
+			productName = "mvvm+rac";
+			productReference = C4738318229CCB99000328A8 /* mvvm+rac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4738310229CCB99000328A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = xiuyu;
+				TargetAttributes = {
+					C4738317229CCB99000328A8 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = C4738313229CCB99000328A8 /* Build configuration list for PBXProject "mvvm+rac" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C473830F229CCB99000328A8;
+			productRefGroup = C4738319229CCB99000328A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4738317229CCB99000328A8 /* mvvm+rac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4738316229CCB99000328A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4738328229CCB9B000328A8 /* LaunchScreen.storyboard in Resources */,
+				C4738325229CCB9B000328A8 /* Assets.xcassets in Resources */,
+				C4738323229CCB99000328A8 /* Main.storyboard in Resources */,
+				C4BA4D47229D35AE00595D61 /* login.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DC43F07E8DAB6F32A74DE45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mvvm+rac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4738314229CCB99000328A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4738335229CCDA6000328A8 /* LoginViewModel.m in Sources */,
+				C4738320229CCB99000328A8 /* ViewController.m in Sources */,
+				C473832B229CCB9B000328A8 /* main.m in Sources */,
+				C46F2A8B229CE4E4000F5367 /* Utils.m in Sources */,
+				C473831D229CCB99000328A8 /* AppDelegate.m in Sources */,
+				C4738338229CCDBA000328A8 /* LoginModel.m in Sources */,
+				C4BA4D4B229D365B00595D61 /* Request.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C4738321229CCB99000328A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4738322229CCB99000328A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C4738326229CCB9B000328A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4738327229CCB9B000328A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C473832C229CCB9B000328A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C473832D229CCB9B000328A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C473832F229CCB9B000328A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49F6BCED493ABBEBC09333F0 /* Pods-mvvm+rac.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94MGHZ6CZS;
+				INFOPLIST_FILE = "mvvm+rac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xiuyu.mvvm-rac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4738330229CCB9B000328A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1048FD383D6E9E6F94E10806 /* Pods-mvvm+rac.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94MGHZ6CZS;
+				INFOPLIST_FILE = "mvvm+rac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xiuyu.mvvm-rac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4738313229CCB99000328A8 /* Build configuration list for PBXProject "mvvm+rac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C473832C229CCB9B000328A8 /* Debug */,
+				C473832D229CCB9B000328A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C473832E229CCB9B000328A8 /* Build configuration list for PBXNativeTarget "mvvm+rac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C473832F229CCB9B000328A8 /* Debug */,
+				C4738330229CCB9B000328A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4738310229CCB99000328A8 /* Project object */;
+}
