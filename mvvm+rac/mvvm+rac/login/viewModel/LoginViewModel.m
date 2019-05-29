@@ -10,7 +10,8 @@
 #import "Utils.h"
 #import "Request.h"
 #import <YYKit.h>
-#import "LoginModel.h"
+
+static const NSTimeInterval timeCountNum = 20;
 
 @interface LoginViewModel ()
 {
@@ -18,6 +19,8 @@
 }
 
 @property (strong, nonatomic) NSTimer *timer;
+
+@property (strong, nonatomic) RACSignal *dispoable;
 
 @end
 
@@ -27,9 +30,19 @@
 {
     if (self = [super init])
     {
-        _timeCount = 60;
+        _timeCount = timeCountNum;
         
         self.codeBtnTitile = @"获取验证码";
+        
+        self.changeTitleSignal = [RACSubject subject];
+        
+        /**
+         *  RAC(self, avatarURL) = [[RACObserve(self, username)
+         *  map:^(NSString *username) {
+         *  return [[OCTUser mrc_fetchUserWithRawLogin:username] avatarURL];
+         *  }]
+         *  distinctUntilChanged];
+         */
         
         @weakify(self)
         //登录按钮是否可点
@@ -48,10 +61,10 @@
         
         //验证码按钮是否可点
         self.validCodeSignal = [[RACSignal
-                                 combineLatest:@[RACObserve(self, mobileNo), RACObserve(self, codeBtnTitile)]
-                                 reduce:^(NSString *mobileNo) {
+                                 combineLatest:@[RACObserve(self, mobileNo),RACObserve(self, codeBtnTitile)]
+                                 reduce:^(NSString *mobileNo,NSString *title) {
                                      @strongify(self)
-                                     BOOL code = [Utils verifyPhoneNumber:mobileNo] && [self.codeBtnTitile isEqualToString:@"获取验证码"];
+                                     BOOL code = [Utils verifyPhoneNumber:mobileNo] && [title isEqualToString:@"获取验证码"];
                                      
                                      UIColor *textColor = code ?[UIColor colorWithRed:255 / 255.0 green:151 / 255.0 blue:0 / 255.0 alpha:1.0] :[UIColor colorWithRed:204 / 255.0 green:204 / 255.0 blue:204 / 255.0 alpha:1.0];
                                      self.codeBtnBackGroundColor = textColor;
@@ -79,16 +92,15 @@
         //登录
         self.loginCommand = [[RACCommand  alloc] initWithSignalBlock:^RACSignal *_Nonnull (id _Nullable input) {
             return [RACSignal createSignal:^RACDisposable *_Nullable (id <RACSubscriber> _Nonnull subscriber) {
-               
-                [Request loginSucess:^(NSDictionary * responseObject) {
-                    
+                [Request loginSucess:^(NSDictionary *responseObject) {
                     LoginModel *model = [LoginModel modelWithJSON:responseObject];
                     
-                    NSLog(@"%@",model.message);
-                } fail:^(NSDictionary * responseObject) {
+                    NSLog(@"%@", model.message);
                     
-                }];
-     
+                    [subscriber sendNext:model];
+                    [subscriber sendCompleted];
+                } fail:^(NSDictionary *responseObject) {}];
+                
                 return nil;
             }];
         }];
@@ -103,15 +115,17 @@
     if (_timeCount > 0)
     {
         self.codeBtnTitile = [NSString stringWithFormat:@"%ld秒", _timeCount];
-        NSLog(@"%@", self.codeBtnTitile);
+//        NSLog(@"%@ %@",[NSThread currentThread], self.codeBtnTitile);
     }
     else
     {
         [self.timer invalidate];
         self.timer = nil;
         self.codeBtnTitile = @"获取验证码";
-        _timeCount = 60;
+        _timeCount = timeCountNum;
     }
+    
+    [self.changeTitleSignal sendNext:self.codeBtnTitile];
 }
 
 @end

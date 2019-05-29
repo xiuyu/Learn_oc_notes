@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveObjC.h>
+#import "LoginModel.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -40,6 +42,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 //验证码title
 @property (strong, nonatomic) NSString *codeBtnTitile;
+
+@property (strong,nonatomic) RACSubject *changeTitleSignal;
 
 //验证码按钮背景颜色
 @property (strong, nonatomic) UIColor *codeBtnBackGroundColor;

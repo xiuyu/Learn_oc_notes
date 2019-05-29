@@ -8,14 +8,13 @@
 
 #define  InputViewBackGroundColor [UIColor colorWithRed:245 / 255.0 green:245 / 255.0 blue:245 / 255.0 alpha:1.0]
 
-#import "ViewController.h"
+#import "LoginViewController.h"
 #import "masonry.h"
-#import "login/LoginViewModel.h"
+#import "LoginViewModel.h"
+#import "HomeViewController.h"
 
-@interface ViewController ()
-{
-    NSInteger _timeCount;
-}
+@interface LoginViewController ()
+
 
 @property (strong, nonatomic) UITextField *phoneNumText;
 
@@ -27,17 +26,21 @@
 
 @property (strong, nonatomic) LoginViewModel *viewModel;
 
-@property (strong, nonatomic) NSTimer *timer;
 
 @end
 
-@implementation ViewController
+@implementation LoginViewController
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    _timeCount = 60;
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupUI];
     
@@ -60,13 +63,27 @@
     RAC(self.codeBtn, backgroundColor) = RACObserve(self.viewModel, codeBtnBackGroundColor);
     RAC(self.loginBtn, backgroundColor) = RACObserve(self.viewModel, loginBtnBackGroundColor);
     
-    RAC(self.codeBtn, titleLabel.text) = RACObserve(self.viewModel, codeBtnTitile);
+//    RAC(self.codeBtn, titleLabel.text) = RACObserve(self.viewModel, codeBtnTitile);
+   
+    [self.viewModel.changeTitleSignal subscribeNext:^(id  _Nullable x) {
+        [self.codeBtn setTitle:x forState:UIControlStateNormal|UIControlStateDisabled];
+    }];
+    
+    
+    /**
+     [RACObserve(self.viewModel, avatarURL) subscribeNext:^(NSURL *avatarURL) {
+     @strongify(self)
+     [self.avatarButton sd_setImageWithURL:avatarURL forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default-avatar"]];
+     }];
+
+     */
     
     //获取验证码
     [[self.codeBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(__kindof UIControl *_Nullable x) {
          @strongify(self)
-         [self.viewModel.getCodeCommand execute: @{}];
+//         [self.viewModel.getCodeCommand execute: @{}];
+          [self.viewModel.getCodeCommand execute: self.codeBtn];
      }];
     
     // 数据成功
@@ -81,10 +98,16 @@
          [self.viewModel.loginCommand execute: @{}];
      }];
     
-    // 数据成功
-    [self.viewModel.loginCommand.executionSignals.switchToLatest subscribeNext:^(id _Nullable x) {
-        NSLog(@"%@", x);
+    // 数据成功跳转
+    [self.viewModel.loginCommand.executionSignals.switchToLatest subscribeNext:^(LoginModel *model) {
+        
+        if (model.code == 0) {
+            
+            HomeViewController *vc = [[HomeViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }];
+    
 }
 
 - (void)setupUI
@@ -141,6 +164,7 @@
     self.phoneNumText = [[UITextField alloc] init];
     self.phoneNumText.font = [UIFont systemFontOfSize:15];
     self.phoneNumText.keyboardType = UIKeyboardTypeNumberPad;
+    self.phoneNumText.text = @"18718748418";
     [view addSubview:self.phoneNumText];
     self.phoneNumText.placeholder = @"请输入手机号码";
     self.phoneNumText.textColor = [UIColor blackColor];
@@ -170,10 +194,11 @@
     }];
     
     //------ 验证码按钮 ------//
-    self.codeBtn = [[UIButton alloc] init];
+    self.codeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.codeBtn.layer.cornerRadius = 4;
     [self.codeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
     [self.codeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.codeBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.codeBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     self.codeBtn.backgroundColor = [UIColor colorWithRed:204 / 255.0 green:204 / 255.0 blue:204 / 255.0 alpha:1.0];
     [self.view addSubview:self.codeBtn];

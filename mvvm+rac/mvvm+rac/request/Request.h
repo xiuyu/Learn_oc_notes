@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Request : NSObject
 
+/**
+ 登录
+
+ @param sucess 成功回调
+ @param fail 失败回调
+ */
 + (void)loginSucess:(void (^)(NSDictionary *))sucess fail:(void (^)(NSDictionary *))fail;
 
 @end
