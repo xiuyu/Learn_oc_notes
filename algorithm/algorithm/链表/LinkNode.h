@@ -18,16 +18,16 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param p 节点
  *  @param value 值
  */
-+ (instancetype)addNode:(nullable LinkNode *)p value:(id)value;
++ (LinkNode *)addNode:(nullable LinkNode *)p value:(id)value;
+
 
 /**
  *  遍历单链表
  *
- *  @param head 节点
+ *  @param p 节点
  *  @param block 回调
  */
-+ (void)traverseList:(LinkNode *)head block:(void (^)(NSInteger value))block;
-
++(void)traverseLink:(LinkNode *)p block:(void (^)(id value))block;
 @end
 
 NS_ASSUME_NONNULL_END

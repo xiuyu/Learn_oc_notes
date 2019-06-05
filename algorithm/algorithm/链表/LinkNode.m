@@ -18,40 +18,33 @@
 
 @implementation LinkNode
 
-+ (instancetype)addNode:(nullable LinkNode *)p value:(id)value
++(LinkNode *)addNode:(LinkNode *)p value:(id)value
 {
-    if (p == nil)
-    {
+    if (p == nil) {
+        
         p = [[LinkNode alloc] init];
         p->value = value;
         p->next = nil;
-    }
-    else
+    }else
     {
         p->next = [LinkNode addNode:p->next value:value];
     }
+    
     return p;
 }
 
-+ (void)traverseList:(LinkNode *)head block:(void (^)(NSInteger))block
++(void)traverseLink:(LinkNode *)p block:(void (^)(id _Nonnull))block
 {
-    if (head->next == nil)
-    {
-        if (block)
-        {
-            block([head->value integerValue]);
-        }
+    if (p->next == nil) {
+        
+        !block?:block(p->value);
         return;
-    }
-    else
+    }else
     {
-        if (block)
-        {
-            block([head->value integerValue]);
-        }
+        !block?:block(p->value);
     }
     
-    [LinkNode traverseList:head->next block:block];
+    [LinkNode traverseLink:p->next block:block];
 }
 
 @end

@@ -28,6 +28,7 @@
     [self time_after];
     
     [self apply];
+    
 }
 
 - (void)group

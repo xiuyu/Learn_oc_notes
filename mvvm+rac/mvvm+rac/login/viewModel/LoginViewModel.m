@@ -44,6 +44,7 @@ static const NSTimeInterval timeCountNum = 20;
          *  distinctUntilChanged];
          */
         
+        
         @weakify(self)
         //登录按钮是否可点
         self.validLoginSignal = [[RACSignal

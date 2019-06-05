@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^PayViewResultBlock)(NSInteger index, NSString *pwd);
+typedef void (^PayViewResultBlock)(NSInteger index, NSString * _Nullable pwd);
 
 NS_ASSUME_NONNULL_BEGIN
 

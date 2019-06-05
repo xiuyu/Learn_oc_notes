@@ -15,9 +15,9 @@
 #import "AdjustImageButton.h"
 #import "PayView.h"
 #import "UIView+PlaceholderView.h"
+#import <mach/mach_time.h>
 
-
-@interface ViewController ()<SearchHistoryViewDelegate,ScrollViewMenuItemDelegate>
+@interface ViewController () <SearchHistoryViewDelegate, ScrollViewMenuItemDelegate>
 
 @end
 
@@ -30,63 +30,60 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    NSLog(@"%.f",self.mas_bottomLayoutGuide);
-//    NSLog(@"%.f",self.bottomLayoutGuide.length);
+    //    NSLog(@"%.f",self.mas_bottomLayoutGuide);
+    //    NSLog(@"%.f",self.bottomLayoutGuide.length);
     
+    //    NSAssert(<#condition#>, <#desc, ...#>)
     
-//    NSAssert(<#condition#>, <#desc, ...#>)
+    //    self.parentViewController
+    //    self.isBeingDismissed
     
-//    self.parentViewController
-//    self.isBeingDismissed
+    //    self.isMovingFromParentViewController
     
-//    self.isMovingFromParentViewController
-
     SearchHistoryView *h = [[SearchHistoryView alloc] initWithFrame:CGRectMake(0, 100, ScreenWidth, 500)];
-    h.titleArray =@[@"账单",@"这是一条测试文案宽度的文案到底有多长呢",@"高度限定",@"emoji",@"这是一条测试文案宽度的文案，当文案超过一行显示的时候显示为",@"这是二条测试文案宽度的文案，当文案超过一行显示的时候显示为"];
+    h.titleArray = @[@"账单", @"这是一条测试文案宽度的文案到底有多长呢", @"高度限定", @"emoji", @"这是一条测试文案宽度的文案，当文案超过一行显示的时候显示为", @"这是二条测试文案宽度的文案，当文案超过一行显示的时候显示为"];
     h.delegate = self;
     [self.view addSubview:h];
-
+    
     ScrollViewMenuItem *i = [[ScrollViewMenuItem alloc] initWithFrame:CGRectMake(0, 300, ScreenWidth, 44)];
-    i.titleArray = @[@"生活服务",@"政务服务",@"社区服务",@"健康服务",@"生活服务",@"政务服务",@"社区服务",@"健康服务"];
+    i.titleArray = @[@"生活服务", @"政务服务", @"社区服务", @"健康服务", @"生活服务", @"政务服务", @"社区服务", @"健康服务"];
     [i scrollMenuItemIndex:2];
     i.menuDelegate = self;
     [self.view addSubview:i];
-
+    
     MarqueeView *m = [[MarqueeView alloc] initWithFrame:CGRectMake(0, 500, ScreenWidth, 44)];
-    m.titleArray = @[@"区住房建设局加大对商品房预售款监",@"番禺区青年学习宣传贯彻习近平新时",@"123",@"456"];
+    m.titleArray = @[@"区住房建设局加大对商品房预售款监", @"番禺区青年学习宣传贯彻习近平新时", @"123", @"456"];
     [self.view addSubview:m];
+    
 
-   
+//    UInt64 s =  mach_absolute_time();
+    
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle
+- (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
 }
 
--(void)searchHistoryWiew:(SearchHistoryView *)searchView clickedButtonAtIndex:(NSInteger)index
+- (void)searchHistoryWiew:(SearchHistoryView *)searchView clickedButtonAtIndex:(NSInteger)index
 {
-    NSLog(@"点击的：%ld",index);
+    NSLog(@"点击的：%ld", index);
     [PayView showPayViewWithTitle:nil buttonClickBolck:^(NSInteger index, NSString *pwd) {
-        NSLog(@"支付密码：%@",pwd);
+        NSLog(@"支付密码：%@", pwd);
     }];
 }
 
--(void)scrollViewMenuItem:(ScrollViewMenuItem *)menuItem clickButtonIndex:(NSInteger)index
+- (void)scrollViewMenuItem:(ScrollViewMenuItem *)menuItem clickButtonIndex:(NSInteger)index
 {
-    NSLog(@"scrollitem %ld",index);
-   
+    NSLog(@"scrollitem %ld", index);
 }
 
 - (void)click
 {
-    [AlertView showWithTitle:@"标题" content:@"内容" buttionTitles:@[@"确定",@"取消"] buttonClickBlock:nil];
+    [AlertView showWithTitle:@"标题" content:@"内容" buttionTitles:@[@"确定", @"取消"] buttonClickBlock:nil];
     
-    [self.view showPlaceholderWithType:PlaceholderViewNoNetWork buttonClickBlock:^{
-        
-    }];
+    [self.view showPlaceholderWithType:PlaceholderViewNoNetWork buttonClickBlock:^{}];
 }
-
 
 
 @end

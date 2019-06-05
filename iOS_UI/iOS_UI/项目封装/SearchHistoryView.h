@@ -20,7 +20,7 @@
  @param searchView 历史view
  @param index 点击index
  */
-- (void)searchHistoryWiew:(SearchHistoryView *)searchView clickedButtonAtIndex:(NSInteger)index;
+- (void)searchHistoryWiew:(nonnull SearchHistoryView *)searchView clickedButtonAtIndex:(NSInteger)index;
 
 @end
 

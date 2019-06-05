@@ -15,7 +15,6 @@
 
 @interface LoginViewController ()
 
-
 @property (strong, nonatomic) UITextField *phoneNumText;
 
 @property (strong, nonatomic) UITextField *phonecodeText;
@@ -26,12 +25,11 @@
 
 @property (strong, nonatomic) LoginViewModel *viewModel;
 
-
 @end
 
 @implementation LoginViewController
 
--(void)viewWillAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
@@ -63,27 +61,25 @@
     RAC(self.codeBtn, backgroundColor) = RACObserve(self.viewModel, codeBtnBackGroundColor);
     RAC(self.loginBtn, backgroundColor) = RACObserve(self.viewModel, loginBtnBackGroundColor);
     
-//    RAC(self.codeBtn, titleLabel.text) = RACObserve(self.viewModel, codeBtnTitile);
-   
-    [self.viewModel.changeTitleSignal subscribeNext:^(id  _Nullable x) {
-        [self.codeBtn setTitle:x forState:UIControlStateNormal|UIControlStateDisabled];
+    //    RAC(self.codeBtn, titleLabel.text) = RACObserve(self.viewModel, codeBtnTitile);
+    
+    [self.viewModel.changeTitleSignal subscribeNext:^(id _Nullable x) {
+        [self.codeBtn setTitle:x forState:UIControlStateNormal | UIControlStateDisabled];
     }];
     
-    
     /**
-     [RACObserve(self.viewModel, avatarURL) subscribeNext:^(NSURL *avatarURL) {
-     @strongify(self)
-     [self.avatarButton sd_setImageWithURL:avatarURL forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default-avatar"]];
-     }];
-
+     *  [RACObserve(self.viewModel, avatarURL) subscribeNext:^(NSURL *avatarURL) {
+     *  @strongify(self)
+     *  [self.avatarButton sd_setImageWithURL:avatarURL forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"default-avatar"]];
+     *  }];
      */
     
     //获取验证码
     [[self.codeBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(__kindof UIControl *_Nullable x) {
          @strongify(self)
-//         [self.viewModel.getCodeCommand execute: @{}];
-          [self.viewModel.getCodeCommand execute: self.codeBtn];
+         //         [self.viewModel.getCodeCommand execute: @{}];
+         [self.viewModel.getCodeCommand execute: self.codeBtn];
      }];
     
     // 数据成功
@@ -100,14 +96,12 @@
     
     // 数据成功跳转
     [self.viewModel.loginCommand.executionSignals.switchToLatest subscribeNext:^(LoginModel *model) {
-        
-        if (model.code == 0) {
-            
+        if (model.code == 0)
+        {
             HomeViewController *vc = [[HomeViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
     }];
-    
 }
 
 - (void)setupUI

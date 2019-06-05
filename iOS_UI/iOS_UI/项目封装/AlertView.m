@@ -43,6 +43,7 @@ static const NSInteger button_tag = 1000;
     }];
     
     return alertView;
+
 }
 
 - (instancetype)initWithTitle:(NSString *)title content:(NSString *)content buttionTitles:(NSArray *)buttonTitles buttonClickBlock:(nullable ButtonClickBlock)block

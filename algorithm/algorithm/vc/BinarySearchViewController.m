@@ -41,6 +41,7 @@
     NSInteger maxIndex = array.count;
     
     while (maxIndex >= minIndex) {
+        
         NSInteger midIndex = (minIndex + maxIndex) / 2;
         
         NSInteger midNum = [array[midIndex] integerValue];

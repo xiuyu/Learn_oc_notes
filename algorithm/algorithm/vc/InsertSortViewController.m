@@ -39,31 +39,38 @@
  *在最坏的情况下时间复杂度仍为O(n²),而使用最优的增量在最坏的情况下却为O(n²⁄³)。
  *增量序列的最后一个增量值必须等于1才行。
  * 由于记录是跳跃式的移动，希尔排序并不是一种稳定的排序算法。
- *  @param list list description
+ *  @param array array description
  */
-- (void)shellSort:(NSMutableArray *)list
+- (void)shellSort:(NSMutableArray *)array
 {
-    int gap = (int)list.count / 2;
+    //@(6), @(1), @(2), @(5), @(9), @(4), @(3), @(7)
+    
+    NSInteger gap = (NSInteger)array.count;
     
     while (gap >= 1) {
         
-        for (int i = gap; i < [list count]; i++)
+        for (NSInteger i = gap; i < array.count; i++)
         {
-            NSInteger temp = [[list objectAtIndex:i] intValue];
-            int j = i;
+            NSInteger temp = [array[i] integerValue];
             
-            while (j >= gap && temp < [[list objectAtIndex:(j - gap)] intValue]) {
+            NSInteger j = i;
+            
+            //如果前面的元素比temp大就替换
+            while (j >= gap && temp < [array[j - gap] integerValue]) {
                 
-                [list replaceObjectAtIndex:j withObject:[list objectAtIndex:j - gap]];
+                [array replaceObjectAtIndex:j withObject:array[j - gap]];
                 j -= gap;
             }
             
-            [list replaceObjectAtIndex:j withObject:[NSNumber numberWithInteger:temp]];
+            [array replaceObjectAtIndex:j withObject:[NSNumber numberWithInteger:temp]];
         }
         
         gap = gap / 2;
     }
 }
+
+
+
 
 /**
  *  　  1. 从第一个元素开始，认为该元素已经是排好序的。
@@ -112,5 +119,6 @@
     
     NSLog(@"%@", ascendingArr);
 }
+
 
 @end
