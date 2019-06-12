@@ -22,14 +22,14 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSArray *array = @[@1,@5,@7];
+    NSArray *array = @[@1, @5, @7];
     
     [array objectAtIndex:2];
     
     [array objectAtIndex:4];
 }
 
-+(void)load
++ (void)load
 {
     swizzleMethod([self class], @selector(viewWillAppear:), @selector(swizzle_viewWillAppear:));
 }
@@ -40,7 +40,12 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzleSelector)
     
     Method swizzleMethod = class_getInstanceMethod(class, swizzleSelector);
     
-    // 添加方法
+    /**添加方法
+     *  Class cls: 将要给添加方法的类，传的类型 ［类名  class］
+     *  SEL name: 将要添加的方法名，传的类型   @selector(方法名)
+     *  IMP imp：实现这个方法的函数 ，C语言写法：（IMP）方法名  class_getMethodImplementation(self,@selector(方法名：))
+     *  const char *types：表示我们要添加的方法的返回值和参数 "v@:@"：v：是添加方法无返回值    @表示是id(也就是要添加的类) ：表示添加的方法类型  @表示：参数类型
+     **/
     BOOL add = class_addMethod(class, originalSelector, method_getImplementation(swizzleMethod), method_getTypeEncoding(swizzleMethod));
     
     //如果有替換
@@ -54,29 +59,19 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzleSelector)
     }
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
     
-    NSLog(@"%s%@",__func__,NSStringFromSelector(_cmd));
+    NSLog(@"%s%@", __func__, NSStringFromSelector(_cmd));
 }
 
--(void)swizzle_viewWillAppear:(BOOL)animated
+- (void)swizzle_viewWillAppear:(BOOL)animated
 {
     //調用原方法
     [self swizzle_viewWillAppear:animated];
-
-    NSLog(@"%s%@",__func__,NSStringFromSelector(_cmd));
+    
+    NSLog(@"%s%@", __func__, NSStringFromSelector(_cmd));
 }
-
-/*
- #pragma mark - Navigation
- *
- *  // In a storyboard-based application, you will often want to do a little preparation before navigation
- *  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- *   // Get the new view controller using [segue destinationViewController].
- *   // Pass the selected object to the new view controller.
- *  }
- */
 
 @end

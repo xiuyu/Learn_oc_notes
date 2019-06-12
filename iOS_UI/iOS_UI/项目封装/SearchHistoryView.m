@@ -43,6 +43,8 @@
     //文本高度间距
     CGFloat heightInterval = 10;
     
+    CGFloat titleEdge = 10;
+    
     UIFont *font = [UIFont systemFontOfSize:13];
     
     
@@ -72,11 +74,15 @@
                 CGSize s = size;
                 s.width = ScreenWidth - 2 * startX - labelIterval;
                 size = s;
-                button.titleEdgeInsets = UIEdgeInsetsMake(0, 10 , 0, 10);
+                button.titleEdgeInsets = UIEdgeInsetsMake(0, titleEdge , 0, titleEdge);
             }
             
             lastX = startX;
-            currentRow += 1;
+            
+            if (i > 0) {
+                 currentRow += 1;
+            }
+            
         }
         
         /**计算位置*/

@@ -25,6 +25,8 @@
 		C426D56822929C9800096785 /* PayView.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D56722929C9800096785 /* PayView.m */; };
 		C426D56C2292A1F700096785 /* MyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D56B2292A1F700096785 /* MyTextField.m */; };
 		C426D5722293A1F900096785 /* UIView+PlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D5712293A1F900096785 /* UIView+PlaceholderView.m */; };
+		C46C5CC122B0E41000FD75D0 /* UINavigationController+Find.m in Sources */ = {isa = PBXBuildFile; fileRef = C46C5CC022B0E41000FD75D0 /* UINavigationController+Find.m */; };
+		C46C5CC422B0E4B200FD75D0 /* UITabBarController+Find.m in Sources */ = {isa = PBXBuildFile; fileRef = C46C5CC322B0E4B200FD75D0 /* UITabBarController+Find.m */; };
 		C49446F3229544C800F6DBB9 /* TextFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49446F2229544C800F6DBB9 /* TextFadeView.m */; };
 		C49446F622954E9A00F6DBB9 /* DrawCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49446F522954E9A00F6DBB9 /* DrawCurveView.m */; };
 		C49446F92295551400F6DBB9 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49446F82295551400F6DBB9 /* DrawLineView.m */; };
@@ -33,6 +35,7 @@
 		C49447052296792100F6DBB9 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49447042296792100F6DBB9 /* DrawViewController.m */; };
 		C494470822967DEB00F6DBB9 /* IncisionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = C494470722967DEB00F6DBB9 /* IncisionAnimate.m */; };
 		C494470B2296825600F6DBB9 /* DrawMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C494470A2296825600F6DBB9 /* DrawMenuView.m */; };
+		C4B3FD4A22AFA5BE00A18464 /* UIImage+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B3FD4922AFA5BE00A18464 /* UIImage+Circle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,10 @@
 		C426D56B2292A1F700096785 /* MyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextField.m; sourceTree = "<group>"; };
 		C426D5702293A1F900096785 /* UIView+PlaceholderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+PlaceholderView.h"; sourceTree = "<group>"; };
 		C426D5712293A1F900096785 /* UIView+PlaceholderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+PlaceholderView.m"; sourceTree = "<group>"; };
+		C46C5CBF22B0E41000FD75D0 /* UINavigationController+Find.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Find.h"; sourceTree = "<group>"; };
+		C46C5CC022B0E41000FD75D0 /* UINavigationController+Find.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Find.m"; sourceTree = "<group>"; };
+		C46C5CC222B0E4B200FD75D0 /* UITabBarController+Find.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+Find.h"; sourceTree = "<group>"; };
+		C46C5CC322B0E4B200FD75D0 /* UITabBarController+Find.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+Find.m"; sourceTree = "<group>"; };
 		C49446F1229544C800F6DBB9 /* TextFadeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFadeView.h; sourceTree = "<group>"; };
 		C49446F2229544C800F6DBB9 /* TextFadeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFadeView.m; sourceTree = "<group>"; };
 		C49446F422954E9A00F6DBB9 /* DrawCurveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawCurveView.h; sourceTree = "<group>"; };
@@ -86,6 +93,8 @@
 		C494470722967DEB00F6DBB9 /* IncisionAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncisionAnimate.m; sourceTree = "<group>"; };
 		C49447092296825600F6DBB9 /* DrawMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawMenuView.h; sourceTree = "<group>"; };
 		C494470A2296825600F6DBB9 /* DrawMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawMenuView.m; sourceTree = "<group>"; };
+		C4B3FD4822AFA5BE00A18464 /* UIImage+Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circle.h"; sourceTree = "<group>"; };
+		C4B3FD4922AFA5BE00A18464 /* UIImage+Circle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Circle.m"; sourceTree = "<group>"; };
 		FC1396B912FD6D1ACFB32E9B /* libPods-iOS_UI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS_UI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,8 +176,6 @@
 				C426D49722927F4600096785 /* MarqueeViewCell.m */,
 				C426D56622929C9800096785 /* PayView.h */,
 				C426D56722929C9800096785 /* PayView.m */,
-				C426D5702293A1F900096785 /* UIView+PlaceholderView.h */,
-				C426D5712293A1F900096785 /* UIView+PlaceholderView.m */,
 			);
 			path = "项目封装";
 			sourceTree = "<group>";
@@ -176,8 +183,16 @@
 		C426D4A122927F5300096785 /* category */ = {
 			isa = PBXGroup;
 			children = (
+				C426D5702293A1F900096785 /* UIView+PlaceholderView.h */,
+				C426D5712293A1F900096785 /* UIView+PlaceholderView.m */,
 				C426D4A222927F5300096785 /* UIView+frameAdjust.m */,
 				C426D4A322927F5300096785 /* UIView+frameAdjust.h */,
+				C4B3FD4822AFA5BE00A18464 /* UIImage+Circle.h */,
+				C4B3FD4922AFA5BE00A18464 /* UIImage+Circle.m */,
+				C46C5CBF22B0E41000FD75D0 /* UINavigationController+Find.h */,
+				C46C5CC022B0E41000FD75D0 /* UINavigationController+Find.m */,
+				C46C5CC222B0E4B200FD75D0 /* UITabBarController+Find.h */,
+				C46C5CC322B0E4B200FD75D0 /* UITabBarController+Find.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -344,6 +359,7 @@
 				C426D4A422927F5300096785 /* UIView+frameAdjust.m in Sources */,
 				C426D49E22927F4600096785 /* ScrollViewMenuItem.m in Sources */,
 				C49446FF22963C3600F6DBB9 /* IrregularLabelView.m in Sources */,
+				C46C5CC122B0E41000FD75D0 /* UINavigationController+Find.m in Sources */,
 				C426D4A022927F4600096785 /* MarqueeView.m in Sources */,
 				C426D48B22927E5700096785 /* main.m in Sources */,
 				C426D47D22927E5600096785 /* AppDelegate.m in Sources */,
@@ -351,6 +367,8 @@
 				C49446F622954E9A00F6DBB9 /* DrawCurveView.m in Sources */,
 				C494470222964D2800F6DBB9 /* HeartLineView.m in Sources */,
 				C426D49F22927F4600096785 /* SearchHistoryView.m in Sources */,
+				C46C5CC422B0E4B200FD75D0 /* UITabBarController+Find.m in Sources */,
+				C4B3FD4A22AFA5BE00A18464 /* UIImage+Circle.m in Sources */,
 				C49446F3229544C800F6DBB9 /* TextFadeView.m in Sources */,
 				C426D4AB2292844200096785 /* AdjustImageButton.m in Sources */,
 				C494470B2296825600F6DBB9 /* DrawMenuView.m in Sources */,

@@ -14,14 +14,22 @@
 + (void)load
 {
     //类族
-    Method fromMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(objectAtIndex:));
+    Class cls = objc_getClass("__NSArrayI");
     
-    Method toMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(swizzle_objectAtIndex:));
+    Method originalMethod = class_getInstanceMethod(cls, @selector(objectAtIndex:));
     
-    method_exchangeImplementations(fromMethod, toMethod);
+    Method swizzelMethod = class_getInstanceMethod(cls, @selector(swizzle_objectAtIndex:));
     
-   
+    BOOL add = class_addMethod(cls, @selector(swizzle_objectAtIndex:), method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
     
+    if (add)
+    {
+        class_replaceMethod(cls, @selector(objectAtIndex:), method_getImplementation(swizzelMethod), method_getTypeEncoding(swizzelMethod));
+    }
+    else
+    {
+        method_exchangeImplementations(originalMethod, swizzelMethod);
+    }
 }
 
 - (id)swizzle_objectAtIndex:(NSInteger)index

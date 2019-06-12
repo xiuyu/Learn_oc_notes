@@ -33,12 +33,4 @@
     [self.myCustomDelegate textFieldDidDelete:self withString:stringReplaced];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
 @end
