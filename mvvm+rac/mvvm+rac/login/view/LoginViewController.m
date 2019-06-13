@@ -50,6 +50,7 @@
     @weakify(self)
     self.viewModel = [[LoginViewModel alloc] init];
     
+    //RAC(对象，对象的属性) = (一个信号);
     RAC(self.viewModel, smsCode) = [RACSignal merge:@[RACObserve(self.phonecodeText, text), self.phonecodeText.rac_textSignal]];
     
     RAC(self.viewModel, mobileNo) = [RACSignal merge:@[RACObserve(self.phoneNumText, text), self.phoneNumText.rac_textSignal]];
@@ -78,8 +79,7 @@
     [[self.codeBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(__kindof UIControl *_Nullable x) {
          @strongify(self)
-         //         [self.viewModel.getCodeCommand execute: @{}];
-         [self.viewModel.getCodeCommand execute: self.codeBtn];
+         [self.viewModel.getCodeCommand execute: @{}];
      }];
     
     // 数据成功
@@ -221,6 +221,7 @@
     [view2 addSubview:self.phonecodeText];
     self.phonecodeText.keyboardType = UIKeyboardTypeNumberPad;
     self.phonecodeText.placeholder = @"输入验证码";
+    self.phonecodeText.text = @"123456";
     self.phoneNumText.textColor = [UIColor blackColor];
     
     [self.phonecodeText mas_makeConstraints:^(MASConstraintMaker *make) {

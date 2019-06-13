@@ -18,9 +18,7 @@ static const NSTimeInterval timeCountNum = 20;
     NSInteger _timeCount;
 }
 
-@property (strong, nonatomic) NSTimer *timer;
-
-@property (strong, nonatomic) RACSignal *dispoable;
+@property (strong, nonatomic) RACDisposable *dispoable;
 
 @end
 
@@ -44,7 +42,6 @@ static const NSTimeInterval timeCountNum = 20;
          *  distinctUntilChanged];
          */
         
-        
         @weakify(self)
         //登录按钮是否可点
         self.validLoginSignal = [[RACSignal
@@ -62,8 +59,8 @@ static const NSTimeInterval timeCountNum = 20;
         
         //验证码按钮是否可点
         self.validCodeSignal = [[RACSignal
-                                 combineLatest:@[RACObserve(self, mobileNo),RACObserve(self, codeBtnTitile)]
-                                 reduce:^(NSString *mobileNo,NSString *title) {
+                                 combineLatest:@[RACObserve(self, mobileNo), RACObserve(self, codeBtnTitile)]
+                                 reduce:^(NSString *mobileNo, NSString *title) {
                                      @strongify(self)
                                      BOOL code = [Utils verifyPhoneNumber:mobileNo] && [title isEqualToString:@"获取验证码"];
                                      
@@ -79,8 +76,8 @@ static const NSTimeInterval timeCountNum = 20;
                 @strongify(self)
                 
                 [self timeHander];
-                //倒计时
-                self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer *_Nonnull timer) {
+                
+                self.dispoable = [[RACSignal interval:1.0 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSDate *_Nullable x) {
                     [self timeHander];
                 }];
                 
@@ -116,15 +113,15 @@ static const NSTimeInterval timeCountNum = 20;
     if (_timeCount > 0)
     {
         self.codeBtnTitile = [NSString stringWithFormat:@"%ld秒", _timeCount];
-//        NSLog(@"%@ %@",[NSThread currentThread], self.codeBtnTitile);
     }
     else
     {
-        [self.timer invalidate];
-        self.timer = nil;
+        [self.dispoable dispose];
         self.codeBtnTitile = @"获取验证码";
         _timeCount = timeCountNum;
     }
+    
+    NSLog(@"%ld", _timeCount);
     
     [self.changeTitleSignal sendNext:self.codeBtnTitile];
 }
