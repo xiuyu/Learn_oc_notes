@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "login/view/LoginViewController.h"
-#import "home/HomeViewController.h"
+#import "home/RACViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    HomeViewController *login = [[HomeViewController alloc] init];
+    LoginViewController *login = [[LoginViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:login];
     
     self.window.rootViewController = nav;

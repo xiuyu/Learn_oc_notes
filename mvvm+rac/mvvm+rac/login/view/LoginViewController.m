@@ -11,7 +11,7 @@
 #import "LoginViewController.h"
 #import "masonry.h"
 #import "LoginViewModel.h"
-#import "HomeViewController.h"
+#import "RACViewController.h"
 
 @interface LoginViewController ()
 
@@ -75,6 +75,29 @@
      *  }];
      */
     
+    [self.phoneNumText.rac_textSignal subscribeNext:^(NSString *_Nullable x) {
+        NSString *result = [x stringByReplacingOccurrencesOfString:@" " withString:@""];
+        
+        if (result.length > 11)
+        {
+            result = [result substringWithRange:NSMakeRange(0, 11)];
+        }
+        
+        NSMutableString *mstr = [[NSMutableString alloc] initWithString:result];
+        
+        if (mstr.length > 7)
+        {
+            [mstr insertString:@" " atIndex:7];
+        }
+        
+        if (mstr.length > 3)
+        {
+            [mstr insertString:@" " atIndex:3];
+        }
+        
+        self.phoneNumText.text = mstr;
+    }];
+    
     //获取验证码
     [[self.codeBtn rac_signalForControlEvents:UIControlEventTouchUpInside]
      subscribeNext:^(__kindof UIControl *_Nullable x) {
@@ -98,7 +121,7 @@
     [self.viewModel.loginCommand.executionSignals.switchToLatest subscribeNext:^(LoginModel *model) {
         if (model.code == 0)
         {
-            HomeViewController *vc = [[HomeViewController alloc] init];
+            RACViewController *vc = [[RACViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
     }];
@@ -158,7 +181,6 @@
     self.phoneNumText = [[UITextField alloc] init];
     self.phoneNumText.font = [UIFont systemFontOfSize:15];
     self.phoneNumText.keyboardType = UIKeyboardTypeNumberPad;
-    self.phoneNumText.text = @"18718748418";
     [view addSubview:self.phoneNumText];
     self.phoneNumText.placeholder = @"请输入手机号码";
     self.phoneNumText.textColor = [UIColor blackColor];
@@ -221,7 +243,6 @@
     [view2 addSubview:self.phonecodeText];
     self.phonecodeText.keyboardType = UIKeyboardTypeNumberPad;
     self.phonecodeText.placeholder = @"输入验证码";
-    self.phonecodeText.text = @"123456";
     self.phoneNumText.textColor = [UIColor blackColor];
     
     [self.phonecodeText mas_makeConstraints:^(MASConstraintMaker *make) {

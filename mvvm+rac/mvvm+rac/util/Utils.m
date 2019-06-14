@@ -12,6 +12,8 @@
 
 + (BOOL)verifyPhoneNumber:(NSString *)mobileNum
 {
+    mobileNum = [mobileNum stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
     NSString *pattern = @"^1\\d{10}$";
     
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];

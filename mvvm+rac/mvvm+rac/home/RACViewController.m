@@ -6,10 +6,10 @@
 //  Copyright © 2019 xiuyu. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "RACViewController.h"
 #import <ReactiveObjC.h>
 
-@interface HomeViewController ()
+@interface RACViewController ()
 
 @property (strong, nonatomic) UITextField *userName;
 
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation HomeViewController
+@implementation RACViewController
 
 - (void)viewDidLoad
 {

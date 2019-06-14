@@ -19,7 +19,7 @@
 		C4738338229CCDBA000328A8 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4738337229CCDBA000328A8 /* LoginModel.m */; };
 		C4BA4D47229D35AE00595D61 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = C4BA4D46229D35AE00595D61 /* login.json */; };
 		C4BA4D4B229D365B00595D61 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA4D4A229D365B00595D61 /* Request.m */; };
-		C4BA4D52229E1FB500595D61 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA4D51229E1FB500595D61 /* HomeViewController.m */; };
+		C4BA4D52229E1FB500595D61 /* RACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA4D51229E1FB500595D61 /* RACViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,8 +45,8 @@
 		C4BA4D46229D35AE00595D61 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		C4BA4D49229D365B00595D61 /* Request.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
 		C4BA4D4A229D365B00595D61 /* Request.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
-		C4BA4D50229E1FB500595D61 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		C4BA4D51229E1FB500595D61 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		C4BA4D50229E1FB500595D61 /* RACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACViewController.h; sourceTree = "<group>"; };
+		C4BA4D51229E1FB500595D61 /* RACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,8 +173,8 @@
 		C4BA4D4F229E1F4900595D61 /* home */ = {
 			isa = PBXGroup;
 			children = (
-				C4BA4D50229E1FB500595D61 /* HomeViewController.h */,
-				C4BA4D51229E1FB500595D61 /* HomeViewController.m */,
+				C4BA4D50229E1FB500595D61 /* RACViewController.h */,
+				C4BA4D51229E1FB500595D61 /* RACViewController.m */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 				C473831D229CCB99000328A8 /* AppDelegate.m in Sources */,
 				C4738338229CCDBA000328A8 /* LoginModel.m in Sources */,
 				C4BA4D4B229D365B00595D61 /* Request.m in Sources */,
-				C4BA4D52229E1FB500595D61 /* HomeViewController.m in Sources */,
+				C4BA4D52229E1FB500595D61 /* RACViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
