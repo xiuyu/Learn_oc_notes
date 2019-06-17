@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <script>
+        
+        var config = {
+            "debug": true, // 开启调试模式
+            "appId": '', // 必填，第三方APPID
+            "timestamp": '', // 必填，生成签名的时间戳
+            " nonceStr": '', // 必填，生成签名的随机串
+            "signature": '',// 必填，签名
+            "jsApiList": [] // 必填，需要使用的JS接口列表，未提供可暂不填写
+        };
+
+        function js_oc() {
+            window.webkit.messageHandlers.js_oc.postMessage(JSON.stringify(config));
+        }
+
+        function oc_js(data) {
+            document.write("data" + JSON.stringify(data));
+        }
+
+    </script>
+
+    <button onclick="js_oc()">js调用oc</button>
+    <button onclick="oc_js()">oc调js</button>
+    <br>
+</body>
+
+</html>
