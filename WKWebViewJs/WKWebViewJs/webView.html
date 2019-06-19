@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+            <title>标题</title>
+    </head>
+    <div>
+        <button onclick="printLog();">webView的js调用native</button>
+        
+    </div>
+    <script type="text/javascript">
+        
+        function change() {
+            log("change 输入的值=");
+        }
+        
+        function printLog(){
+            log("oc已经调用function");
+            log("oc注入的方法");
+            log("注入的obj对象"+ obj.print);
+            obj.print("str");
+        }
+    </script>
+    </body>
+</html>

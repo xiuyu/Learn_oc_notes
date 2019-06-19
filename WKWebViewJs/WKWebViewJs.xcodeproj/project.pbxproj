@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42857CF22B9D74B00C880AF /* MyJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C42857CE22B9D74B00C880AF /* MyJSObject.m */; };
+		C42857D122B9DAB600C880AF /* webView.html in Resources */ = {isa = PBXBuildFile; fileRef = C42857D022B9DAB600C880AF /* webView.html */; };
 		C46C5CFC22B72F9500FD75D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C46C5CFB22B72F9500FD75D0 /* AppDelegate.m */; };
 		C46C5CFF22B72F9500FD75D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46C5CFE22B72F9500FD75D0 /* ViewController.m */; };
 		C46C5D0222B72F9500FD75D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46C5D0022B72F9500FD75D0 /* Main.storyboard */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C42857CC22B9D65000C880AF /* JSProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSProtocol.h; sourceTree = "<group>"; };
+		C42857CD22B9D74B00C880AF /* MyJSObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyJSObject.h; sourceTree = "<group>"; };
+		C42857CE22B9D74B00C880AF /* MyJSObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyJSObject.m; sourceTree = "<group>"; };
+		C42857D022B9DAB600C880AF /* webView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webView.html; sourceTree = "<group>"; };
 		C46C5CF722B72F9400FD75D0 /* WKWebViewJs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKWebViewJs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46C5CFA22B72F9400FD75D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C46C5CFB22B72F9500FD75D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,10 +67,14 @@
 			isa = PBXGroup;
 			children = (
 				C46C5D1022B72FCD00FD75D0 /* indexIos.html */,
+				C42857D022B9DAB600C880AF /* webView.html */,
 				C46C5CFA22B72F9400FD75D0 /* AppDelegate.h */,
 				C46C5CFB22B72F9500FD75D0 /* AppDelegate.m */,
 				C46C5CFD22B72F9500FD75D0 /* ViewController.h */,
 				C46C5CFE22B72F9500FD75D0 /* ViewController.m */,
+				C42857CC22B9D65000C880AF /* JSProtocol.h */,
+				C42857CD22B9D74B00C880AF /* MyJSObject.h */,
+				C42857CE22B9D74B00C880AF /* MyJSObject.m */,
 				C46C5D0022B72F9500FD75D0 /* Main.storyboard */,
 				C46C5D0322B72F9600FD75D0 /* Assets.xcassets */,
 				C46C5D0522B72F9600FD75D0 /* LaunchScreen.storyboard */,
@@ -135,6 +145,7 @@
 				C46C5D0422B72F9600FD75D0 /* Assets.xcassets in Resources */,
 				C46C5D0222B72F9500FD75D0 /* Main.storyboard in Resources */,
 				C46C5D1122B72FCD00FD75D0 /* indexIos.html in Resources */,
+				C42857D122B9DAB600C880AF /* webView.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46C5CFF22B72F9500FD75D0 /* ViewController.m in Sources */,
+				C42857CF22B9D74B00C880AF /* MyJSObject.m in Sources */,
 				C46C5D0A22B72F9600FD75D0 /* main.m in Sources */,
 				C46C5CFC22B72F9500FD75D0 /* AppDelegate.m in Sources */,
 			);
@@ -224,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -277,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94MGHZ6CZS;
 				INFOPLIST_FILE = WKWebViewJs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94MGHZ6CZS;
 				INFOPLIST_FILE = WKWebViewJs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
