@@ -37,6 +37,8 @@
 		C49447052296792100F6DBB9 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49447042296792100F6DBB9 /* DrawViewController.m */; };
 		C494470822967DEB00F6DBB9 /* IncisionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = C494470722967DEB00F6DBB9 /* IncisionAnimate.m */; };
 		C494470B2296825600F6DBB9 /* DrawMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C494470A2296825600F6DBB9 /* DrawMenuView.m */; };
+		C4AD0FCA22C0A1AE00C5A939 /* MyHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AD0FC922C0A1AE00C5A939 /* MyHttpRequest.m */; };
+		C4AD0FCD22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AD0FCC22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.m */; };
 		C4B3FD4A22AFA5BE00A18464 /* UIImage+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B3FD4922AFA5BE00A18464 /* UIImage+Circle.m */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,10 @@
 		C494470722967DEB00F6DBB9 /* IncisionAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncisionAnimate.m; sourceTree = "<group>"; };
 		C49447092296825600F6DBB9 /* DrawMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawMenuView.h; sourceTree = "<group>"; };
 		C494470A2296825600F6DBB9 /* DrawMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawMenuView.m; sourceTree = "<group>"; };
+		C4AD0FC822C0A1AE00C5A939 /* MyHttpRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHttpRequest.h; sourceTree = "<group>"; };
+		C4AD0FC922C0A1AE00C5A939 /* MyHttpRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyHttpRequest.m; sourceTree = "<group>"; };
+		C4AD0FCB22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAFHTTPRequestSerializer.h; sourceTree = "<group>"; };
+		C4AD0FCC22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAFHTTPRequestSerializer.m; sourceTree = "<group>"; };
 		C4B3FD4822AFA5BE00A18464 /* UIImage+Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circle.h"; sourceTree = "<group>"; };
 		C4B3FD4922AFA5BE00A18464 /* UIImage+Circle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Circle.m"; sourceTree = "<group>"; };
 		FC1396B912FD6D1ACFB32E9B /* libPods-iOS_UI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS_UI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +152,7 @@
 		C426D47A22927E5600096785 /* iOS_UI */ = {
 			isa = PBXGroup;
 			children = (
+				C4AD0FC722C0A17500C5A939 /* http */,
 				C426D49122927F4600096785 /* 项目封装 */,
 				C49446ED2295369700F6DBB9 /* draw */,
 				C426D4A8229283B900096785 /* button */,
@@ -252,6 +259,17 @@
 				C494470A2296825600F6DBB9 /* DrawMenuView.m */,
 			);
 			path = draw;
+			sourceTree = "<group>";
+		};
+		C4AD0FC722C0A17500C5A939 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				C4AD0FCB22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.h */,
+				C4AD0FCC22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.m */,
+				C4AD0FC822C0A1AE00C5A939 /* MyHttpRequest.h */,
+				C4AD0FC922C0A1AE00C5A939 /* MyHttpRequest.m */,
+			);
+			path = http;
 			sourceTree = "<group>";
 		};
 		C4B2073822978105002A7CDD /* animate */ = {
@@ -364,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C426D4A722927F7000096785 /* ViewController.m in Sources */,
+				C4AD0FCA22C0A1AE00C5A939 /* MyHttpRequest.m in Sources */,
 				C426D5722293A1F900096785 /* UIView+PlaceholderView.m in Sources */,
 				C426D49D22927F4600096785 /* AlertView.m in Sources */,
 				C46C5CEA22B3453100FD75D0 /* Utils.m in Sources */,
@@ -378,6 +397,7 @@
 				C49446F622954E9A00F6DBB9 /* DrawCurveView.m in Sources */,
 				C46C5CED22B37D0400FD75D0 /* UIColor+Hex.m in Sources */,
 				C494470222964D2800F6DBB9 /* HeartLineView.m in Sources */,
+				C4AD0FCD22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.m in Sources */,
 				C426D49F22927F4600096785 /* SearchHistoryView.m in Sources */,
 				C46C5CC422B0E4B200FD75D0 /* UITabBarController+Find.m in Sources */,
 				C4B3FD4A22AFA5BE00A18464 /* UIImage+Circle.m in Sources */,

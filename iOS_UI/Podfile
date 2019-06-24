@@ -7,6 +7,7 @@ target 'iOS_UI' do
 
   # Pods for iOS_UI
   pod 'Masonry'
-  pod 'YYKit' 
+  pod 'YYKit'
+  pod 'AFNetworking'
 
 end
