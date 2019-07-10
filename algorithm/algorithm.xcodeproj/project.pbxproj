@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42C163122D57D1E008A542A /* LinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = C42C163022D57D1E008A542A /* LinkList.m */; };
+		C42C164422D5C07D008A542A /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = C42C164322D5C07D008A542A /* LinkedList.m */; };
 		C476675522A4C35900B8F3DB /* LinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C476675422A4C35900B8F3DB /* LinkViewController.m */; };
 		C47F63DF228A4F8800DA4231 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F63DE228A4F8800DA4231 /* AppDelegate.m */; };
 		C47F63E2228A4F8800DA4231 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F63E1228A4F8800DA4231 /* ViewController.m */; };
@@ -25,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C42C162F22D57D1E008A542A /* LinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkList.h; sourceTree = "<group>"; };
+		C42C163022D57D1E008A542A /* LinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkList.m; sourceTree = "<group>"; };
+		C42C164222D5C07D008A542A /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		C42C164322D5C07D008A542A /* LinkedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		C476675322A4C35900B8F3DB /* LinkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkViewController.h; sourceTree = "<group>"; };
 		C476675422A4C35900B8F3DB /* LinkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkViewController.m; sourceTree = "<group>"; };
 		C47F63DA228A4F8800DA4231 /* algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +132,10 @@
 			children = (
 				C47F6405228BB36300DA4231 /* LinkNode.h */,
 				C47F6406228BB36300DA4231 /* LinkNode.m */,
+				C42C162F22D57D1E008A542A /* LinkList.h */,
+				C42C163022D57D1E008A542A /* LinkList.m */,
+				C42C164222D5C07D008A542A /* LinkedList.h */,
+				C42C164322D5C07D008A542A /* LinkedList.m */,
 			);
 			path = "链表";
 			sourceTree = "<group>";
@@ -226,10 +236,12 @@
 				C47F63F5228A508300DA4231 /* InsertSortViewController.m in Sources */,
 				C47F63ED228A4F8A00DA4231 /* main.m in Sources */,
 				C47F640B228BED3B00DA4231 /* Hash.m in Sources */,
+				C42C164422D5C07D008A542A /* LinkedList.m in Sources */,
 				C47F63FC228A5DA900DA4231 /* SelectSortViewController.m in Sources */,
 				C4BA4D5622A0DD6C00595D61 /* BinaryTreeNode.m in Sources */,
 				C47F63DF228A4F8800DA4231 /* AppDelegate.m in Sources */,
 				C4BA4D5922A0DE1000595D61 /* BinaryTreeViewController.m in Sources */,
+				C42C163122D57D1E008A542A /* LinkList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

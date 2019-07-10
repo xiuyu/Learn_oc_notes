@@ -2,7 +2,7 @@
 //  LinkViewController.h
 //  algorithm
 //
-//  Created by 丘秀玉 on 2019/6/3.
+//  Created by xiuyu on 2019/6/3.
 //  Copyright © 2019 xiuyu. All rights reserved.
 //
 

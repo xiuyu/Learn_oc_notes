@@ -2,12 +2,13 @@
 //  LinkViewController.m
 //  algorithm
 //
-//  Created by 丘秀玉 on 2019/6/3.
+//  Created by xiuyu on 2019/6/3.
 //  Copyright © 2019 xiuyu. All rights reserved.
 //
 
 #import "LinkViewController.h"
-#import "LinkNode.h"
+#import "LinkList.h"
+#import "LinkedList.h"
 
 @interface LinkViewController ()
 
@@ -20,20 +21,40 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self nodeList];
-}
-
-
--(void)nodeList
-{
-    LinkNode *n = [LinkNode addNode:nil value:@2];
-    LinkNode *k = [LinkNode addNode:n value:@8];
-    LinkNode *s = [LinkNode addNode:k value:@10];
+    /**双向链表*/
+    LinkedList<NSString *> *list2 = [[LinkedList alloc] init];
+    [list2 add:@"11"];
+    [list2 add:1 element:@"22"];
+    [list2 add:@"33"];
     
-    [LinkNode traverseLink:s block:^(id  _Nonnull value) {
-        
-        NSLog(@"value %@",value);
-    }];
+    [list2 add:1 element:@"100"];
+    [list2 remove:1];
+    
+    
+    NSLog(@"%@",list2);
+    
+    
+    
+    /**单向链表*/
+    LinkList *list = [[LinkList alloc] init];
+    [list add:@"11"];
+    [list add:1 element:@"22"];
+    [list add:@"33"];
+
+    [list remove:1];
+
+    //    NSLog(@"index = %ld",[list indexOf:@"22"]);
+
+
+    //    [list clear];
+    NSLog(@"%@",list);
+    
+   
+    
+ 
+   
 }
+
+
 
 @end
