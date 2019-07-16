@@ -41,7 +41,10 @@
  */
 + (BinaryTreeNode *)addTreeNode:(BinaryTreeNode *)treeNode value:(NSInteger)value
 {
+    //@(7),@(6),@(3),@(2),@(1),@(9),@(10),@(12),@(14),@(4),@(14)
     //根节点不存在，创建节点
+    NSLog(@"%ld",treeNode.value);
+    
     if (!treeNode)
     {
         treeNode = [BinaryTreeNode new];
@@ -61,6 +64,8 @@
         treeNode.rightNode = [BinaryTreeNode addTreeNode:treeNode.rightNode value:value];
     }
     return treeNode;
+    
+
 }
 
 /**

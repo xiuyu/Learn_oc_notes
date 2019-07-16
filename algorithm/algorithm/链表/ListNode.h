@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LinkNode : NSObject
+@interface ListNode : NSObject
 
 /**
  *  增加节点
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param p 节点
  *  @param value 值
  */
-+ (LinkNode *)addNode:(nullable LinkNode *)p value:(id)value;
++ (ListNode *)addNode:(nullable ListNode *)p value:(id)value;
 
 
 /**
@@ -27,7 +27,26 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param p 节点
  *  @param block 回调
  */
-+(void)traverseLink:(LinkNode *)p block:(void (^)(id value))block;
++(void)traverseLink:(ListNode *)p block:(void (^)(id value))block;
+
+
+
+/**
+ 链表反转
+
+ @param head 头结点
+ */
++ (ListNode *)reverse:(ListNode *)head;
+
+
+
+/**
+ 链表反转
+ 
+ @param head 头结点
+ */
++ (ListNode *)reverse2:(ListNode *)head;
+
 @end
 
 NS_ASSUME_NONNULL_END

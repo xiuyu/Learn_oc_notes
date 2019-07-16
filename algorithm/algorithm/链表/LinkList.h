@@ -84,6 +84,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (NSInteger)indexOf:(ObjectType)element;
 
+
+/**
+ 链表反转
+ */
+-(void)reverse;
+
 @end
 
 NS_ASSUME_NONNULL_END

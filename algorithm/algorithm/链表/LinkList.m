@@ -10,7 +10,7 @@
 
 static const NSInteger ELEMENT_NO_FOND = -1;
 
-@interface Node<ObjectType> : NSObject
+@interface Node <ObjectType>: NSObject
 
 @property (strong, nonatomic) Node *next;
 
@@ -30,7 +30,7 @@ static const NSInteger ELEMENT_NO_FOND = -1;
     return self;
 }
 
--(void)dealloc
+- (void)dealloc
 {
     NSLog(@"单向链表node delloc");
 }
@@ -54,7 +54,7 @@ static const NSInteger ELEMENT_NO_FOND = -1;
     _first = nil; //断掉第一根线
 }
 
--(BOOL)isEmpty
+- (BOOL)isEmpty
 {
     return _size == 0;
 }
@@ -89,9 +89,10 @@ static const NSInteger ELEMENT_NO_FOND = -1;
     return [self getNode:index].element;
 }
 
--(id)set:(NSInteger)index element:(id)element
+- (id)set:(NSInteger)index element:(id)element
 {
     Node *node = [self getNode:index];
+    
     [self getNode:index].element = element;
     return node.element;
 }
@@ -145,6 +146,25 @@ static const NSInteger ELEMENT_NO_FOND = -1;
     }
     
     return node;
+}
+
+- (void)reverse
+{
+    if (_first == nil || _first.next == nil)
+    {
+        return;
+    }
+    
+    Node *newHead = nil;
+    
+    while (_first != nil) {
+        Node *tmp = _first.next;
+        _first.next = newHead;
+        newHead = _first;
+        _first = tmp;
+    }
+    
+    _first = newHead;
 }
 
 - (NSString *)description
