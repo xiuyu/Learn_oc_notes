@@ -10,7 +10,7 @@
 		C42C163122D57D1E008A542A /* LinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = C42C163022D57D1E008A542A /* LinkList.m */; };
 		C42C164422D5C07D008A542A /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = C42C164322D5C07D008A542A /* LinkedList.m */; };
 		C42C164822D6E3FE008A542A /* Hanoi.m in Sources */ = {isa = PBXBuildFile; fileRef = C42C164722D6E3FE008A542A /* Hanoi.m */; };
-		C42C165422DC1AEA008A542A /* BinaryTreeList.m in Sources */ = {isa = PBXBuildFile; fileRef = C42C165322DC1AEA008A542A /* BinaryTreeList.m */; };
+		C42C165422DC1AEA008A542A /* BinarySortTreeList.m in Sources */ = {isa = PBXBuildFile; fileRef = C42C165322DC1AEA008A542A /* BinarySortTreeList.m */; };
 		C476675522A4C35900B8F3DB /* LinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C476675422A4C35900B8F3DB /* LinkViewController.m */; };
 		C47F63DF228A4F8800DA4231 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F63DE228A4F8800DA4231 /* AppDelegate.m */; };
 		C47F63E2228A4F8800DA4231 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F63E1228A4F8800DA4231 /* ViewController.m */; };
@@ -26,6 +26,7 @@
 		C47F640E228BF20200DA4231 /* BinarySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F640D228BF20200DA4231 /* BinarySearchViewController.m */; };
 		C4BA4D5622A0DD6C00595D61 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA4D5522A0DD6C00595D61 /* BinaryTreeNode.m */; };
 		C4BA4D5922A0DE1000595D61 /* BinaryTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BA4D5822A0DE1000595D61 /* BinaryTreeViewController.m */; };
+		C4EEDF2022DF0B8300E8920E /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EEDF1F22DF0B8300E8920E /* TreeNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +36,8 @@
 		C42C164322D5C07D008A542A /* LinkedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		C42C164622D6E3FE008A542A /* Hanoi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hanoi.h; sourceTree = "<group>"; };
 		C42C164722D6E3FE008A542A /* Hanoi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hanoi.m; sourceTree = "<group>"; };
-		C42C165222DC1AEA008A542A /* BinaryTreeList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeList.h; sourceTree = "<group>"; };
-		C42C165322DC1AEA008A542A /* BinaryTreeList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeList.m; sourceTree = "<group>"; };
+		C42C165222DC1AEA008A542A /* BinarySortTreeList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinarySortTreeList.h; sourceTree = "<group>"; };
+		C42C165322DC1AEA008A542A /* BinarySortTreeList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinarySortTreeList.m; sourceTree = "<group>"; };
 		C476675322A4C35900B8F3DB /* LinkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkViewController.h; sourceTree = "<group>"; };
 		C476675422A4C35900B8F3DB /* LinkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkViewController.m; sourceTree = "<group>"; };
 		C47F63DA228A4F8800DA4231 /* algorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = algorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +66,8 @@
 		C4BA4D5522A0DD6C00595D61 /* BinaryTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
 		C4BA4D5722A0DE1000595D61 /* BinaryTreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeViewController.h; sourceTree = "<group>"; };
 		C4BA4D5822A0DE1000595D61 /* BinaryTreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeViewController.m; sourceTree = "<group>"; };
+		C4EEDF1E22DF0B8300E8920E /* TreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
+		C4EEDF1F22DF0B8300E8920E /* TreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +173,10 @@
 			children = (
 				C4BA4D5422A0DD6C00595D61 /* BinaryTreeNode.h */,
 				C4BA4D5522A0DD6C00595D61 /* BinaryTreeNode.m */,
-				C42C165222DC1AEA008A542A /* BinaryTreeList.h */,
-				C42C165322DC1AEA008A542A /* BinaryTreeList.m */,
+				C42C165222DC1AEA008A542A /* BinarySortTreeList.h */,
+				C42C165322DC1AEA008A542A /* BinarySortTreeList.m */,
+				C4EEDF1E22DF0B8300E8920E /* TreeNode.h */,
+				C4EEDF1F22DF0B8300E8920E /* TreeNode.m */,
 			);
 			path = "二叉树";
 			sourceTree = "<group>";
@@ -255,10 +260,11 @@
 				C47F63ED228A4F8A00DA4231 /* main.m in Sources */,
 				C47F640B228BED3B00DA4231 /* Hash.m in Sources */,
 				C42C164422D5C07D008A542A /* LinkedList.m in Sources */,
+				C4EEDF2022DF0B8300E8920E /* TreeNode.m in Sources */,
 				C42C164822D6E3FE008A542A /* Hanoi.m in Sources */,
 				C47F63FC228A5DA900DA4231 /* SelectSortViewController.m in Sources */,
 				C4BA4D5622A0DD6C00595D61 /* BinaryTreeNode.m in Sources */,
-				C42C165422DC1AEA008A542A /* BinaryTreeList.m in Sources */,
+				C42C165422DC1AEA008A542A /* BinarySortTreeList.m in Sources */,
 				C47F63DF228A4F8800DA4231 /* AppDelegate.m in Sources */,
 				C4BA4D5922A0DE1000595D61 /* BinaryTreeViewController.m in Sources */,
 				C42C163122D57D1E008A542A /* LinkList.m in Sources */,

@@ -30,7 +30,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
 
-    self.dataArray = @[@"冒泡（快）排序", @"插入(希尔)排序", @"选择排序", @"二分法查找", @"链表", @"二叉树"];
+    self.dataArray = @[@"冒泡（快）排序", @"插入(希尔)排序", @"选择排序、堆排", @"二分法查找", @"链表", @"二叉树"];
 
     self.vcs = @[@"BubbleSortViewController", @"InsertSortViewController", @"SelectSortViewController", @"BinarySearchViewController", @"LinkViewController", @"BinaryTreeViewController"];
 

@@ -6,44 +6,16 @@
 //  Copyright © 2019 xiuyu. All rights reserved.
 //
 
-#import "BinaryTreeList.h"
+#import "BinarySortTreeList.h"
 
-@interface TreeNode <ObjectType>: NSObject
-
-@property (strong, nonatomic) TreeNode *leftNode;
-
-@property (strong, nonatomic) TreeNode *rightNode;
-
-@property (assign, nonatomic) NSInteger val;
-
-@end
-
-@implementation TreeNode
-
-- (instancetype)initWithNode:(NSInteger)val
-{
-    if (self = [super init])
-    {
-        self.val = val;
-    }
-    return self;
-}
-
-- (void)dealloc
-{
-    NSLog(@"tree node delloc");
-}
-
-@end
-
-@interface BinaryTreeList ()
+@interface BinarySortTreeList ()
 {
     TreeNode *_root;
 }
 
 @end
 
-@implementation BinaryTreeList
+@implementation BinarySortTreeList
 
 - (void)addTreeNode:(NSInteger)val
 {
@@ -83,7 +55,6 @@
         }
     }
     
-    NSLog(@"%@", _root);
 }
 
 
@@ -167,6 +138,101 @@
         NSLog(@"%ld", current.val);
     }
 }
+
+
+-(BOOL)deleteTree:(NSInteger)val
+{
+    TreeNode *current = _root;
+    TreeNode *parent = nil; //父节点
+    
+    BOOL isLeft = NO; //该节点位置左还是右
+    
+    while (val != current.val) {
+        parent = current;
+        
+        if (val < current.val)
+        {
+            current = current.leftNode;
+            isLeft = YES;
+        }
+        else
+        {
+            current = current.rightNode;
+            isLeft = NO;
+        }
+        
+        if (current == nil)
+        {
+            return NO;
+        }
+    }
+    
+    if (current.leftNode == nil && current.rightNode == nil)
+    {
+        if (_root == parent)
+        {
+            _root = nil;
+        }
+        
+        if (isLeft)
+        {
+            parent.leftNode = nil;
+        }
+        else
+        {
+            parent.rightNode = nil;
+        }
+    }
+    else if (current.leftNode != nil && current.rightNode != nil)
+    {
+        NSInteger min = [self findMinWith:current.rightNode];
+        current.val = min;
+    }
+    else
+    {
+        //子节点是在当前节点的子节点是左右边
+        if (current.leftNode != nil)
+        {
+            if (isLeft)
+            {
+                parent.leftNode = current.leftNode;
+            }
+            else
+            {
+                parent.rightNode = current.leftNode;
+            }
+        }
+        else
+        {
+            if (isLeft)
+            {
+                parent.leftNode = current.rightNode;
+            }
+            else
+            {
+                parent.rightNode = current.rightNode;
+            }
+        }
+    }
+    
+    return YES;
+}
+
+- (NSInteger)findMinWith:(TreeNode *)node
+{
+    TreeNode *target = node;
+    
+    while (target.leftNode != nil) {
+        target = target.leftNode;
+    }
+    
+    [self deleteTree:target.val];
+    return target.val;
+}
+
+
+
+
 
 @end
 
