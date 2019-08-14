@@ -39,27 +39,27 @@
 
 
     /**单向链表*/
-    LinkList *list = [[LinkList alloc] init];
-    [list add:@"11"];
-    [list add:1 element:@"22"];
-    [list add:@"33"];
-
-//    [list remove:1];
-
-    //    NSLog(@"index = %ld",[list indexOf:@"22"]);
-
-
-    //    [list clear];
-    NSLog(@"%@",list);
-
-    [list reverse];
-
-    NSLog(@"=====");
-
-    NSLog(@"%@",list);
+//    LinkList *list = [[LinkList alloc] init];
+//    [list add:@"11"];
+//    [list add:1 element:@"22"];
+//    [list add:@"33"];
+//
+////    [list remove:1];
+//
+//    //    NSLog(@"index = %ld",[list indexOf:@"22"]);
+//
+//
+//    //    [list clear];
+//    NSLog(@"%@",list);
+//
+//    [list reverse];
+//
+//    NSLog(@"=====");
+//
+//    NSLog(@"%@",list);
     
  
-//    [self nodeList];
+    [self nodeList];
    
 }
 
@@ -74,7 +74,7 @@
         NSLog(@"遍历%@",value);
     }];
     
-    ListNode *node =[ListNode reverse2:n];
+    ListNode *node =[ListNode reverse:n];
     
     NSLog(@"-------");
     [ListNode traverseLink:node block:^(id  _Nonnull value) {

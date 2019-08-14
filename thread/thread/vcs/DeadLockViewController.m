@@ -20,7 +20,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self sync_mian];
+//    [self sync_mian];
     
     [self sync_async];
 }

@@ -231,7 +231,11 @@
 }
 
 
-
+-(NSInteger)minDiffInBST
+{
+    
+    return 0;
+}
 
 
 @end

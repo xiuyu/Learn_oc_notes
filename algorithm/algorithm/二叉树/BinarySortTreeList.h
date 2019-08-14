@@ -71,7 +71,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(BOOL)deleteTree:(NSInteger)val;
 
-
+//783. 二叉搜索树结点最小距离
+-(NSInteger)minDiffInBST;
 
 @end
 

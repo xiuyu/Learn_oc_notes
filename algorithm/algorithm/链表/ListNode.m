@@ -49,6 +49,7 @@
     [ListNode traverseLink:p->next block:block];
 }
 
+//1,2,3,4,
 + (ListNode *)reverse:(ListNode *)head
 {
     if (head == nil || head->next == nil)

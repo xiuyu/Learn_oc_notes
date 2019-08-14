@@ -45,7 +45,7 @@ static BOOL shouldCancel = NO;
                 NSLog(@"在i=%d的时候已经取消了", i);
                 break;
             }
-            NSLog(@"%d", i);
+            NSLog(@"i=%d", i);
             
             [NSThread sleepForTimeInterval:1];
         }
@@ -83,6 +83,12 @@ static BOOL shouldCancel = NO;
     dispatch_async(queue, block3);
     
     dispatch_block_cancel(block2);
+    
+//    dispatch_block_cancel(<#^(void)block#>)
+    
+//    dispatch_resume(<#dispatch_object_t  _Nonnull object#>)
+    
+//    dispatch_suspend(<#dispatch_object_t  _Nonnull object#>)
 }
 
 @end

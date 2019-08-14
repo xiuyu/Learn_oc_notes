@@ -45,32 +45,48 @@
 {
     //@(6), @(1), @(2), @(5), @(9), @(4), @(3), @(7)
     
-    NSInteger gap = (NSInteger)array.count;
-    
-    while (gap >= 1) {
-        
-        for (NSInteger i = gap; i < array.count; i++)
+    //遍历所有的步长
+    for (NSInteger d = array.count / 2; d > 0; d /= 2)
+    {
+        //遍历所有的元素
+        for (NSInteger i = d; i < array.count; i++)
         {
-            NSInteger temp = [array[i] integerValue];
-            
-            NSInteger j = i;
-            
-            //如果前面的元素比temp大就替换
-            while (j >= gap && temp < [array[j - gap] integerValue]) {
-                
-                [array replaceObjectAtIndex:j withObject:array[j - gap]];
-                j -= gap;
+            //遍历本组的元素
+            for (NSInteger j = i - d; j >= 0; j -= d)
+            {
+                if ([array[j] integerValue] > [array[j + d] integerValue])
+                {
+                    NSNumber *temp = array[j];
+                    array[j] = array[j + d];
+                    array[j + d] = temp;
+                }
             }
-            
-            [array replaceObjectAtIndex:j withObject:[NSNumber numberWithInteger:temp]];
         }
-        
-        gap = gap / 2;
     }
+    
+    //    NSInteger gap = (NSInteger)array.count / 2;
+    
+    //    while (gap >= 1) {
+    //
+    //        for (NSInteger i = gap; i < array.count; i++)
+    //        {
+    //            NSInteger temp = [array[i] integerValue];
+    //
+    //            NSInteger j = i;
+    //
+    //            //如果前面的元素比temp大就替换
+    //            while (j >= gap && temp < [array[j - gap] integerValue]) {
+    //
+    //                [array replaceObjectAtIndex:j withObject:array[j - gap]];
+    //                j -= gap;
+    //            }
+    //
+    //            [array replaceObjectAtIndex:j withObject:[NSNumber numberWithInteger:temp]];
+    //        }
+    //
+    //        gap = gap / 2;
+    //    }
 }
-
-
-
 
 /**
  *  　  1. 从第一个元素开始，认为该元素已经是排好序的。
@@ -119,6 +135,5 @@
     
     NSLog(@"%@", ascendingArr);
 }
-
 
 @end

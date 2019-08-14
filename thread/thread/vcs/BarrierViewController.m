@@ -19,7 +19,9 @@
 
 static NSString *_name;
 
+
 @implementation BarrierViewController
+
 
 - (void)viewDidLoad
 {
@@ -28,11 +30,14 @@ static NSString *_name;
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    queue = dispatch_get_global_queue(0, 0);
+    queue = dispatch_queue_create("changeName", DISPATCH_QUEUE_CONCURRENT);
     
     [self barrier];
+    
+   
 }
 
+//在写的过程中不能被读，以免数据不对
 - (void)setName:(NSString *)name
 {
     dispatch_barrier_async(queue, ^{
@@ -50,9 +55,15 @@ static NSString *_name;
     return tempName;
 }
 
+
+
+
+/**
+ 在使用栅栏函数时.使用自定义队列才有意义,如果用的是串行队列或者系统提供的全局并发队列,这个栅栏函数的作用等同于一个同步函数的作用
+ */
 - (void)barrier
 {
-    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    dispatch_queue_t queue = dispatch_queue_create("concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_async(queue, ^{
         [NSThread sleepForTimeInterval:1];
