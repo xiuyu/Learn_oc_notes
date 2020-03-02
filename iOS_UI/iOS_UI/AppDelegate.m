@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "DrawViewController.h"
+#import "PriorityViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UINavigationController *package = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    UINavigationController *package = [[UINavigationController alloc] initWithRootViewController:[[PriorityViewController alloc] init]];
     package.title = @"项目封装";
     
     UINavigationController *draw = [[UINavigationController alloc] initWithRootViewController:[[DrawViewController alloc] init]];

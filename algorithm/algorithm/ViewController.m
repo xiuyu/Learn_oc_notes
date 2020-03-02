@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "LinkedList.h"
 
+#define SUM(a,b) ((a) + (b))
+
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) UITableView *tableView;
@@ -42,7 +44,6 @@
     [self.view addSubview:self.tableView];
     
 
-    
     
 }
 

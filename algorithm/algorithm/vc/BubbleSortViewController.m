@@ -46,10 +46,10 @@
 /**
  1 .设置两个变量i，j  ，排序开始时i = 0，就j = mutableArray.count - 1；
  2 .设置数组的第一个值为比较基准数key，key = mutableArray.count[0]；
- 3 .因为设置key为数组的第一个值，所以先从数组最右边开始往前查找比key小的值。如果没有找到，j--继续往前搜索；如果找到则将mutableArray[i]和mutableArray[j]互换，并且停止往前搜索，进入第4步；
+ 3.因为设置key为数组的第一个值，所以先从数组最右边开始往前查找比key小的值。如果没有找到，j--继续往前搜索；如果找到则将mutableArray[i]和mutableArray[j]互换，并且停止往前搜索，进入第4步；
  4 .从i位置开始往后搜索比可以大的值，如果没有找到，i++继续往后搜索；如果找到则将mutableArray[i]和mutableArray[j]互换，并且停止往后搜索；
  5 .重复第3、4步，直到i == j（此时刚好执行完第三步或第四部），停止排序；
- 6 . 时间复杂度为O(nlogn),最坏的情况下为O(n²)。平实的情况为O(nlogn)。
+ 6 .时间复杂度为O(nlogn),最坏的情况下为O(n²)。平实的情况为O(nlogn)。
  @param array array description
  @param leftIndex leftIndex description
  @param rightIndex rightIndex description

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "People.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -39,6 +40,33 @@
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:self.tableView];
     
+    
+//    People *p = [[People alloc] init];
+//
+//    @autoreleasepool {
+//        [p autorelease];
+//        @autoreleasepool {
+//             [p autorelease];
+//        }
+//    }
+//
+    
+//    self methodForSelector:(SEL)
+    
+    
+
+    NSSet *set = [[NSSet alloc] initWithObjects:@1,@5,@8, nil];
+    
+    [set allObjects];
+    
+    NSOrderedSet *sets = [[NSOrderedSet alloc] initWithObjects:@3,@5, nil];
+    
+//    sets objectAtIndex:<#(NSUInteger)#>
+    
+    NSCountedSet *countSet = [[NSCountedSet alloc] initWithObjects:@"ios",@"ios", nil];
+    [countSet addObject:@"java"];
+    
+    NSLog(@"%@",countSet);
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

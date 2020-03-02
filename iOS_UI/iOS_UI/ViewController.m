@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "AlertView.h"
-#import "masonry.h"
+#import "Masonry.h"
 #import "SearchHistoryView.h"
 #import "ScrollViewMenuItem.h"
 #import "MarqueeView.h"
@@ -16,6 +16,7 @@
 #import "PayView.h"
 #import "UIView+PlaceholderView.h"
 #import <mach/mach_time.h>
+
 
 @interface ViewController () <SearchHistoryViewDelegate, ScrollViewMenuItemDelegate>
 
@@ -44,13 +45,13 @@
     h.titleArray = @[@"账单", @"这是一条测试文案宽度的文案到底有多长呢", @"高度限定", @"emoji", @"这是一条测试文案宽度的文案，当文案超过一行显示的时候显示为", @"这是二条测试文案宽度的文案，当文案超过一行显示的时候显示为"];
     h.delegate = self;
     [self.view addSubview:h];
-    
+
     ScrollViewMenuItem *i = [[ScrollViewMenuItem alloc] initWithFrame:CGRectMake(0, 300, ScreenWidth, 44)];
     i.titleArray = @[@"生活服务", @"政务服务", @"社区服务", @"健康服务", @"生活服务", @"政务服务", @"社区服务", @"健康服务"];
     [i scrollMenuItemIndex:2];
     i.menuDelegate = self;
     [self.view addSubview:i];
-    
+
     MarqueeView *m = [[MarqueeView alloc] initWithFrame:CGRectMake(0, 500, ScreenWidth, 44)];
     m.titleArray = @[@"区住房建设局加大对商品房预售款监", @"番禺区青年学习宣传贯彻习近平新时", @"123", @"456"];
     [self.view addSubview:m];
@@ -58,7 +59,11 @@
 
 //    UInt64 s =  mach_absolute_time();
     
+  
+    
 }
+
+
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
@@ -67,7 +72,7 @@
 
 - (void)searchHistoryWiew:(SearchHistoryView *)searchView clickedButtonAtIndex:(NSInteger)index
 {
-    NSLog(@"点击的：%ld", index);
+    NSLog(@"点击的：%ld",(long) index);
     [PayView showPayViewWithTitle:nil buttonClickBolck:^(NSInteger index, NSString *pwd) {
         NSLog(@"支付密码：%@", pwd);
     }];
@@ -75,7 +80,7 @@
 
 - (void)scrollViewMenuItem:(ScrollViewMenuItem *)menuItem clickButtonIndex:(NSInteger)index
 {
-    NSLog(@"scrollitem %ld", index);
+    NSLog(@"scrollitem %ld", (long)index);
 }
 
 - (void)click

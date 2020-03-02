@@ -38,7 +38,13 @@
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:self.tableView];
+    
+    
+
+
 }
+
+
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     

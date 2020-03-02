@@ -19,18 +19,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    
+
     /*插入排序就是每一步都将一个待排数据按其大小插入到已经排序的数据中的适当位置，直到全部插入完毕。 插入排序方法分直接插入排序和折半插入排序两种。*/
-    
+
     NSMutableArray *array = [NSMutableArray arrayWithObjects:@10, @4, @5, @8, @2, nil];
-    
+
     [self sort:array];
-    
+
     /*希尔排序是把记录按下标的一定增量分组，对每组使用直接插入排序算法排序；随着增量逐渐减少，每组包含的关键词越来越多，当增量减至1时，整个文件恰被分成一组，算法便终止。*/
     NSMutableArray *arr = [[NSMutableArray alloc] initWithObjects:@(6), @(1), @(2), @(5), @(9), @(4), @(3), @(7), nil];
-    
+
     [self shellSort:arr];
-    
+
     NSLog(@"%@", arr);
 }
 
@@ -44,7 +44,7 @@
 - (void)shellSort:(NSMutableArray *)array
 {
     //@(6), @(1), @(2), @(5), @(9), @(4), @(3), @(7)
-    
+
     //遍历所有的步长
     for (NSInteger d = array.count / 2; d > 0; d /= 2)
     {
@@ -63,9 +63,8 @@
             }
         }
     }
-    
+
     //    NSInteger gap = (NSInteger)array.count / 2;
-    
     //    while (gap >= 1) {
     //
     //        for (NSInteger i = gap; i < array.count; i++)
@@ -103,7 +102,7 @@
     for (int i = 1; i < ascendingArr.count; i++)
     {
         NSInteger temp = [ascendingArr[i] integerValue];
-        
+
         for (int j = i - 1; j >= 0; j--)
         {
             if (temp < [ascendingArr[j] integerValue])
@@ -113,7 +112,7 @@
             }
         }
     }
-    
+
     NSLog(@"插入升序排序结果：%@", ascendingArr);
 }
 
@@ -122,7 +121,7 @@
     for (int i = 0; i < ascendingArr.count; i++)
     {
         NSNumber *temp = ascendingArr[i];
-        
+
         for (int j = i - 1; j >= 0; j--)
         {
             if ([ascendingArr[j] compare:temp] == NSOrderedDescending)
@@ -132,7 +131,7 @@
             }
         }
     }
-    
+
     NSLog(@"%@", ascendingArr);
 }
 

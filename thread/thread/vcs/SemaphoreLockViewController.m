@@ -42,6 +42,7 @@
     [self semaphoreSync];
 }
 
+
 - (void)saleTickets
 {
     while (1) {

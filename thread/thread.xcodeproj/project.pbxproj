@@ -14,7 +14,7 @@
 		C47F63492276910400DA4231 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47F63472276910400DA4231 /* LaunchScreen.storyboard */; };
 		C47F634C2276910400DA4231 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F634B2276910400DA4231 /* main.m */; };
 		C47F635F227691E000DA4231 /* SemaphoreLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F6354227691E000DA4231 /* SemaphoreLockViewController.m */; };
-		C47F6360227691E000DA4231 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F6355227691E000DA4231 /* BaseViewController.m */; };
+		C47F6360227691E000DA4231 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F6355227691E000DA4231 /* BaseViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C47F6361227691E000DA4231 /* PriorityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F6356227691E000DA4231 /* PriorityViewController.m */; };
 		C47F6362227691E000DA4231 /* DeadLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F6357227691E000DA4231 /* DeadLockViewController.m */; };
 		C47F6363227691E000DA4231 /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F6359227691E000DA4231 /* LockViewController.m */; };
@@ -336,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 94MGHZ6CZS;
 				INFOPLIST_FILE = thread/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

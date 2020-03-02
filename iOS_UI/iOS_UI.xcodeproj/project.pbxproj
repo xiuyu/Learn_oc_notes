@@ -25,10 +25,12 @@
 		C426D56822929C9800096785 /* PayView.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D56722929C9800096785 /* PayView.m */; };
 		C426D56C2292A1F700096785 /* MyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D56B2292A1F700096785 /* MyTextField.m */; };
 		C426D5722293A1F900096785 /* UIView+PlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D5712293A1F900096785 /* UIView+PlaceholderView.m */; };
+		C43FE621240CACDE007A67CB /* PriorityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43FE620240CACDE007A67CB /* PriorityViewController.m */; };
 		C46C5CC122B0E41000FD75D0 /* UINavigationController+Find.m in Sources */ = {isa = PBXBuildFile; fileRef = C46C5CC022B0E41000FD75D0 /* UINavigationController+Find.m */; };
 		C46C5CC422B0E4B200FD75D0 /* UITabBarController+Find.m in Sources */ = {isa = PBXBuildFile; fileRef = C46C5CC322B0E4B200FD75D0 /* UITabBarController+Find.m */; };
 		C46C5CEA22B3453100FD75D0 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C46C5CE922B3453100FD75D0 /* Utils.m */; };
 		C46C5CED22B37D0400FD75D0 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C46C5CEC22B37D0400FD75D0 /* UIColor+Hex.m */; };
+		C46E7FFC23B1F7A500509CC7 /* ImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C46E7FFB23B1F7A500509CC7 /* ImageUtils.m */; };
 		C49446F3229544C800F6DBB9 /* TextFadeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49446F2229544C800F6DBB9 /* TextFadeView.m */; };
 		C49446F622954E9A00F6DBB9 /* DrawCurveView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49446F522954E9A00F6DBB9 /* DrawCurveView.m */; };
 		C49446F92295551400F6DBB9 /* DrawLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = C49446F82295551400F6DBB9 /* DrawLineView.m */; };
@@ -77,6 +79,8 @@
 		C426D56B2292A1F700096785 /* MyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextField.m; sourceTree = "<group>"; };
 		C426D5702293A1F900096785 /* UIView+PlaceholderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+PlaceholderView.h"; sourceTree = "<group>"; };
 		C426D5712293A1F900096785 /* UIView+PlaceholderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+PlaceholderView.m"; sourceTree = "<group>"; };
+		C43FE61F240CACDE007A67CB /* PriorityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriorityViewController.h; sourceTree = "<group>"; };
+		C43FE620240CACDE007A67CB /* PriorityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PriorityViewController.m; sourceTree = "<group>"; };
 		C46C5CBF22B0E41000FD75D0 /* UINavigationController+Find.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Find.h"; sourceTree = "<group>"; };
 		C46C5CC022B0E41000FD75D0 /* UINavigationController+Find.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Find.m"; sourceTree = "<group>"; };
 		C46C5CC222B0E4B200FD75D0 /* UITabBarController+Find.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+Find.h"; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		C46C5CE922B3453100FD75D0 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = "../../../mvvm+rac/mvvm+rac/util/Utils.m"; sourceTree = "<group>"; };
 		C46C5CEB22B37D0400FD75D0 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		C46C5CEC22B37D0400FD75D0 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		C46E7FFA23B1F7A500509CC7 /* ImageUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageUtils.h; sourceTree = "<group>"; };
+		C46E7FFB23B1F7A500509CC7 /* ImageUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageUtils.m; sourceTree = "<group>"; };
 		C49446F1229544C800F6DBB9 /* TextFadeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFadeView.h; sourceTree = "<group>"; };
 		C49446F2229544C800F6DBB9 /* TextFadeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFadeView.m; sourceTree = "<group>"; };
 		C49446F422954E9A00F6DBB9 /* DrawCurveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawCurveView.h; sourceTree = "<group>"; };
@@ -153,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				C4AD0FC722C0A17500C5A939 /* http */,
+				C43FE61E240CACAF007A67CB /* 优先级 */,
 				C426D49122927F4600096785 /* 项目封装 */,
 				C49446ED2295369700F6DBB9 /* draw */,
 				C426D4A8229283B900096785 /* button */,
@@ -226,6 +233,8 @@
 			children = (
 				C46C5CE822B3453100FD75D0 /* Utils.h */,
 				C46C5CE922B3453100FD75D0 /* Utils.m */,
+				C46E7FFA23B1F7A500509CC7 /* ImageUtils.h */,
+				C46E7FFB23B1F7A500509CC7 /* ImageUtils.m */,
 				C426D563229290DF00096785 /* MyCodeTool.h */,
 				C426D562229290DD00096785 /* MyCodeTool.m */,
 			);
@@ -239,6 +248,15 @@
 				C426D56B2292A1F700096785 /* MyTextField.m */,
 			);
 			path = "继承";
+			sourceTree = "<group>";
+		};
+		C43FE61E240CACAF007A67CB /* 优先级 */ = {
+			isa = PBXGroup;
+			children = (
+				C43FE61F240CACDE007A67CB /* PriorityViewController.h */,
+				C43FE620240CACDE007A67CB /* PriorityViewController.m */,
+			);
+			path = "优先级";
 			sourceTree = "<group>";
 		};
 		C49446ED2295369700F6DBB9 /* draw */ = {
@@ -384,10 +402,12 @@
 				C426D4A722927F7000096785 /* ViewController.m in Sources */,
 				C4AD0FCA22C0A1AE00C5A939 /* MyHttpRequest.m in Sources */,
 				C426D5722293A1F900096785 /* UIView+PlaceholderView.m in Sources */,
+				C46E7FFC23B1F7A500509CC7 /* ImageUtils.m in Sources */,
 				C426D49D22927F4600096785 /* AlertView.m in Sources */,
 				C46C5CEA22B3453100FD75D0 /* Utils.m in Sources */,
 				C426D4A422927F5300096785 /* UIView+frameAdjust.m in Sources */,
 				C426D49E22927F4600096785 /* ScrollViewMenuItem.m in Sources */,
+				C43FE621240CACDE007A67CB /* PriorityViewController.m in Sources */,
 				C49446FF22963C3600F6DBB9 /* IrregularLabelView.m in Sources */,
 				C46C5CC122B0E41000FD75D0 /* UINavigationController+Find.m in Sources */,
 				C426D4A022927F4600096785 /* MarqueeView.m in Sources */,

@@ -20,10 +20,22 @@
     // Override point for customization after application launch.
     ViewController *vc = [[ViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    
+
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
+    
+    
+//    int a[5] = {1,2,3,4,5};
+//    int *prt = (int*) (&a + 1);
+//    
+//    printf("%d,%d",*(a+1),*(prt -1));
+    
+//    NSObject *object = [[NSObject alloc] init];
+//    NSLog(@"Reference Count = %u", [object retainCount]);
+//    [object release];
+//    NSLog(@"Reference Count = %u", [object retainCount]);
+//
     return YES;
 }
 
