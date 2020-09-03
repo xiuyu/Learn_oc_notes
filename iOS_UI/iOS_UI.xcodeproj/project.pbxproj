@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6D853ACA7FC973D8217E9DD4 /* libPods-iOS_UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC1396B912FD6D1ACFB32E9B /* libPods-iOS_UI.a */; };
+		C41CD9AC242353B7001974F6 /* FFPeron.m in Sources */ = {isa = PBXBuildFile; fileRef = C41CD9AB242353B7001974F6 /* FFPeron.m */; };
+		C41CD9AF24237319001974F6 /* SFFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C41CD9AE24237319001974F6 /* SFFactory.m */; };
+		C41CD9B224237513001974F6 /* FMFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C41CD9B124237513001974F6 /* FMFactory.m */; };
+		C41CD9B5242377BA001974F6 /* AFFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C41CD9B4242377BA001974F6 /* AFFactory.m */; };
 		C426D47D22927E5600096785 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C426D47C22927E5600096785 /* AppDelegate.m */; };
 		C426D48322927E5600096785 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C426D48122927E5600096785 /* Main.storyboard */; };
 		C426D48522927E5700096785 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C426D48422927E5700096785 /* Assets.xcassets */; };
@@ -39,13 +43,24 @@
 		C49447052296792100F6DBB9 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49447042296792100F6DBB9 /* DrawViewController.m */; };
 		C494470822967DEB00F6DBB9 /* IncisionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = C494470722967DEB00F6DBB9 /* IncisionAnimate.m */; };
 		C494470B2296825600F6DBB9 /* DrawMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C494470A2296825600F6DBB9 /* DrawMenuView.m */; };
+		C49D4BDF2433280200408EE2 /* CAAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49D4BDE2433280200408EE2 /* CAAnimateViewController.m */; };
+		C49D4BE32435EAF400408EE2 /* SocketRocketUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C49D4BE22435EAF400408EE2 /* SocketRocketUtility.m */; };
 		C4AD0FCA22C0A1AE00C5A939 /* MyHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AD0FC922C0A1AE00C5A939 /* MyHttpRequest.m */; };
 		C4AD0FCD22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AD0FCC22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.m */; };
 		C4B3FD4A22AFA5BE00A18464 /* UIImage+Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B3FD4922AFA5BE00A18464 /* UIImage+Circle.m */; };
+		C4C839952419E21B00850910 /* AbstractObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C839942419E21B00850910 /* AbstractObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF0894E7558C928211F30297 /* Pods-iOS_UI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_UI.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_UI/Pods-iOS_UI.release.xcconfig"; sourceTree = "<group>"; };
+		C41CD9AA242353B7001974F6 /* FFPeron.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FFPeron.h; sourceTree = "<group>"; };
+		C41CD9AB242353B7001974F6 /* FFPeron.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFPeron.m; sourceTree = "<group>"; };
+		C41CD9AD24237319001974F6 /* SFFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFFactory.h; sourceTree = "<group>"; };
+		C41CD9AE24237319001974F6 /* SFFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFFactory.m; sourceTree = "<group>"; };
+		C41CD9B024237513001974F6 /* FMFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMFactory.h; sourceTree = "<group>"; };
+		C41CD9B124237513001974F6 /* FMFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMFactory.m; sourceTree = "<group>"; };
+		C41CD9B3242377BA001974F6 /* AFFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFFactory.h; sourceTree = "<group>"; };
+		C41CD9B4242377BA001974F6 /* AFFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFFactory.m; sourceTree = "<group>"; };
 		C41FDED74BBBAAD4945D1F00 /* Pods-iOS_UI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_UI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_UI/Pods-iOS_UI.debug.xcconfig"; sourceTree = "<group>"; };
 		C426D47822927E5600096785 /* iOS_UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_UI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C426D47B22927E5600096785 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,12 +122,18 @@
 		C494470722967DEB00F6DBB9 /* IncisionAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncisionAnimate.m; sourceTree = "<group>"; };
 		C49447092296825600F6DBB9 /* DrawMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawMenuView.h; sourceTree = "<group>"; };
 		C494470A2296825600F6DBB9 /* DrawMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawMenuView.m; sourceTree = "<group>"; };
+		C49D4BDD2433280200408EE2 /* CAAnimateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAnimateViewController.h; sourceTree = "<group>"; };
+		C49D4BDE2433280200408EE2 /* CAAnimateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAAnimateViewController.m; sourceTree = "<group>"; };
+		C49D4BE12435EAF400408EE2 /* SocketRocketUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketRocketUtility.h; sourceTree = "<group>"; };
+		C49D4BE22435EAF400408EE2 /* SocketRocketUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketRocketUtility.m; sourceTree = "<group>"; };
 		C4AD0FC822C0A1AE00C5A939 /* MyHttpRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHttpRequest.h; sourceTree = "<group>"; };
 		C4AD0FC922C0A1AE00C5A939 /* MyHttpRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyHttpRequest.m; sourceTree = "<group>"; };
 		C4AD0FCB22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAFHTTPRequestSerializer.h; sourceTree = "<group>"; };
 		C4AD0FCC22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAFHTTPRequestSerializer.m; sourceTree = "<group>"; };
 		C4B3FD4822AFA5BE00A18464 /* UIImage+Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Circle.h"; sourceTree = "<group>"; };
 		C4B3FD4922AFA5BE00A18464 /* UIImage+Circle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Circle.m"; sourceTree = "<group>"; };
+		C4C839932419E21B00850910 /* AbstractObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractObject.h; sourceTree = "<group>"; };
+		C4C839942419E21B00850910 /* AbstractObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractObject.m; sourceTree = "<group>"; };
 		FC1396B912FD6D1ACFB32E9B /* libPods-iOS_UI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS_UI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,6 +158,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C41CD9A924235292001974F6 /* 函数式编程 */ = {
+			isa = PBXGroup;
+			children = (
+				C41CD9AA242353B7001974F6 /* FFPeron.h */,
+				C41CD9AB242353B7001974F6 /* FFPeron.m */,
+			);
+			path = "函数式编程";
+			sourceTree = "<group>";
+		};
 		C426D46F22927E5600096785 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +189,11 @@
 			isa = PBXGroup;
 			children = (
 				C4AD0FC722C0A17500C5A939 /* http */,
+				C49D4BE02435EA8600408EE2 /* webSoket */,
+				C49D4BDC2433279200408EE2 /* 动画 */,
+				C41CD9A924235292001974F6 /* 函数式编程 */,
+				C4C839A6241A18B100850910 /* 工厂模式 */,
+				C4C839922419E1F900850910 /* 抽象类 */,
 				C43FE61E240CACAF007A67CB /* 优先级 */,
 				C426D49122927F4600096785 /* 项目封装 */,
 				C49446ED2295369700F6DBB9 /* draw */,
@@ -250,6 +285,15 @@
 			path = "继承";
 			sourceTree = "<group>";
 		};
+		C4386CD8241A1C75004AF6EB /* 工厂方法 */ = {
+			isa = PBXGroup;
+			children = (
+				C41CD9B024237513001974F6 /* FMFactory.h */,
+				C41CD9B124237513001974F6 /* FMFactory.m */,
+			);
+			path = "工厂方法";
+			sourceTree = "<group>";
+		};
 		C43FE61E240CACAF007A67CB /* 优先级 */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +323,24 @@
 			path = draw;
 			sourceTree = "<group>";
 		};
+		C49D4BDC2433279200408EE2 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				C49D4BDD2433280200408EE2 /* CAAnimateViewController.h */,
+				C49D4BDE2433280200408EE2 /* CAAnimateViewController.m */,
+			);
+			path = "动画";
+			sourceTree = "<group>";
+		};
+		C49D4BE02435EA8600408EE2 /* webSoket */ = {
+			isa = PBXGroup;
+			children = (
+				C49D4BE12435EAF400408EE2 /* SocketRocketUtility.h */,
+				C49D4BE22435EAF400408EE2 /* SocketRocketUtility.m */,
+			);
+			path = webSoket;
+			sourceTree = "<group>";
+		};
 		C4AD0FC722C0A17500C5A939 /* http */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +359,43 @@
 				C494470722967DEB00F6DBB9 /* IncisionAnimate.m */,
 			);
 			path = animate;
+			sourceTree = "<group>";
+		};
+		C4C839922419E1F900850910 /* 抽象类 */ = {
+			isa = PBXGroup;
+			children = (
+				C4C839932419E21B00850910 /* AbstractObject.h */,
+				C4C839942419E21B00850910 /* AbstractObject.m */,
+			);
+			path = "抽象类";
+			sourceTree = "<group>";
+		};
+		C4C839A6241A18B100850910 /* 工厂模式 */ = {
+			isa = PBXGroup;
+			children = (
+				C4D4E454241A299700965B17 /* 抽象工厂 */,
+				C4386CD8241A1C75004AF6EB /* 工厂方法 */,
+				C4C839A7241A18BF00850910 /* 简单工厂 */,
+			);
+			path = "工厂模式";
+			sourceTree = "<group>";
+		};
+		C4C839A7241A18BF00850910 /* 简单工厂 */ = {
+			isa = PBXGroup;
+			children = (
+				C41CD9AD24237319001974F6 /* SFFactory.h */,
+				C41CD9AE24237319001974F6 /* SFFactory.m */,
+			);
+			path = "简单工厂";
+			sourceTree = "<group>";
+		};
+		C4D4E454241A299700965B17 /* 抽象工厂 */ = {
+			isa = PBXGroup;
+			children = (
+				C41CD9B3242377BA001974F6 /* AFFactory.h */,
+				C41CD9B4242377BA001974F6 /* AFFactory.m */,
+			);
+			path = "抽象工厂";
 			sourceTree = "<group>";
 		};
 		DA5592B5423E5EFD2A849701 /* Frameworks */ = {
@@ -400,11 +499,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C426D4A722927F7000096785 /* ViewController.m in Sources */,
+				C4C839952419E21B00850910 /* AbstractObject.m in Sources */,
 				C4AD0FCA22C0A1AE00C5A939 /* MyHttpRequest.m in Sources */,
 				C426D5722293A1F900096785 /* UIView+PlaceholderView.m in Sources */,
 				C46E7FFC23B1F7A500509CC7 /* ImageUtils.m in Sources */,
 				C426D49D22927F4600096785 /* AlertView.m in Sources */,
+				C49D4BDF2433280200408EE2 /* CAAnimateViewController.m in Sources */,
 				C46C5CEA22B3453100FD75D0 /* Utils.m in Sources */,
+				C41CD9AF24237319001974F6 /* SFFactory.m in Sources */,
+				C41CD9AC242353B7001974F6 /* FFPeron.m in Sources */,
+				C41CD9B224237513001974F6 /* FMFactory.m in Sources */,
 				C426D4A422927F5300096785 /* UIView+frameAdjust.m in Sources */,
 				C426D49E22927F4600096785 /* ScrollViewMenuItem.m in Sources */,
 				C43FE621240CACDE007A67CB /* PriorityViewController.m in Sources */,
@@ -414,10 +518,12 @@
 				C426D48B22927E5700096785 /* main.m in Sources */,
 				C426D47D22927E5600096785 /* AppDelegate.m in Sources */,
 				C494470822967DEB00F6DBB9 /* IncisionAnimate.m in Sources */,
+				C41CD9B5242377BA001974F6 /* AFFactory.m in Sources */,
 				C49446F622954E9A00F6DBB9 /* DrawCurveView.m in Sources */,
 				C46C5CED22B37D0400FD75D0 /* UIColor+Hex.m in Sources */,
 				C494470222964D2800F6DBB9 /* HeartLineView.m in Sources */,
 				C4AD0FCD22C0A8EF00C5A939 /* MyAFHTTPRequestSerializer.m in Sources */,
+				C49D4BE32435EAF400408EE2 /* SocketRocketUtility.m in Sources */,
 				C426D49F22927F4600096785 /* SearchHistoryView.m in Sources */,
 				C46C5CC422B0E4B200FD75D0 /* UITabBarController+Find.m in Sources */,
 				C4B3FD4A22AFA5BE00A18464 /* UIImage+Circle.m in Sources */,
@@ -572,6 +678,7 @@
 			baseConfigurationReference = C41FDED74BBBAAD4945D1F00 /* Pods-iOS_UI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7827DZ9F2C;
 				INFOPLIST_FILE = iOS_UI/Info.plist;
@@ -591,6 +698,7 @@
 			baseConfigurationReference = AF0894E7558C928211F30297 /* Pods-iOS_UI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7827DZ9F2C;
 				INFOPLIST_FILE = iOS_UI/Info.plist;

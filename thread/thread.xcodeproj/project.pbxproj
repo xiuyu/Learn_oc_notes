@@ -20,6 +20,8 @@
 		C47F6363227691E000DA4231 /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F6359227691E000DA4231 /* LockViewController.m */; };
 		C47F6364227691E000DA4231 /* BarrierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F635E227691E000DA4231 /* BarrierViewController.m */; };
 		C47F6468228D53B600DA4231 /* ThreadCancelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47F6467228D53B600DA4231 /* ThreadCancelViewController.m */; };
+		C4DF02E42446BE5D0031B655 /* NonConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DF02E32446BE5D0031B655 /* NonConcurrentOperation.m */; };
+		C4DF02E72446DE770031B655 /* ConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4DF02E62446DE770031B655 /* ConcurrentOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,10 @@
 		C47F635E227691E000DA4231 /* BarrierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrierViewController.m; sourceTree = "<group>"; };
 		C47F6466228D53B600DA4231 /* ThreadCancelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadCancelViewController.h; sourceTree = "<group>"; };
 		C47F6467228D53B600DA4231 /* ThreadCancelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadCancelViewController.m; sourceTree = "<group>"; };
+		C4DF02E22446BE5D0031B655 /* NonConcurrentOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NonConcurrentOperation.h; sourceTree = "<group>"; };
+		C4DF02E32446BE5D0031B655 /* NonConcurrentOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NonConcurrentOperation.m; sourceTree = "<group>"; };
+		C4DF02E52446DE770031B655 /* ConcurrentOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConcurrentOperation.h; sourceTree = "<group>"; };
+		C4DF02E62446DE770031B655 /* ConcurrentOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConcurrentOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 		C47F6352227691E000DA4231 /* vcs */ = {
 			isa = PBXGroup;
 			children = (
+				C4DF02E12446BE260031B655 /* block */,
 				C47F635D227691E000DA4231 /* BaseViewController.h */,
 				C47F6355227691E000DA4231 /* BaseViewController.m */,
 				C47F635B227691E000DA4231 /* DeadLockViewController.h */,
@@ -112,6 +119,17 @@
 				C47F6467228D53B600DA4231 /* ThreadCancelViewController.m */,
 			);
 			path = vcs;
+			sourceTree = "<group>";
+		};
+		C4DF02E12446BE260031B655 /* block */ = {
+			isa = PBXGroup;
+			children = (
+				C4DF02E22446BE5D0031B655 /* NonConcurrentOperation.h */,
+				C4DF02E32446BE5D0031B655 /* NonConcurrentOperation.m */,
+				C4DF02E52446DE770031B655 /* ConcurrentOperation.h */,
+				C4DF02E62446DE770031B655 /* ConcurrentOperation.m */,
+			);
+			path = block;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +210,8 @@
 				C47F634C2276910400DA4231 /* main.m in Sources */,
 				C47F6468228D53B600DA4231 /* ThreadCancelViewController.m in Sources */,
 				C47F6361227691E000DA4231 /* PriorityViewController.m in Sources */,
+				C4DF02E72446DE770031B655 /* ConcurrentOperation.m in Sources */,
+				C4DF02E42446BE5D0031B655 /* NonConcurrentOperation.m in Sources */,
 				C47F633E2276910300DA4231 /* AppDelegate.m in Sources */,
 				C47F6363227691E000DA4231 /* LockViewController.m in Sources */,
 			);

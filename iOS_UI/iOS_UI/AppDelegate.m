@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "DrawViewController.h"
 #import "PriorityViewController.h"
+#import "CAAnimateViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UINavigationController *package = [[UINavigationController alloc] initWithRootViewController:[[PriorityViewController alloc] init]];
+    UINavigationController *package = [[UINavigationController alloc] initWithRootViewController:[[CAAnimateViewController alloc] init]];
     package.title = @"项目封装";
     
     UINavigationController *draw = [[UINavigationController alloc] initWithRootViewController:[[DrawViewController alloc] init]];

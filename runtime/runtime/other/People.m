@@ -20,13 +20,24 @@
 
 + (BOOL)resolveInstanceMethod:(SEL)sel
 {
-    if (sel == @selector(game))
+    if (sel == @selector(test))
     {
         //动态添加方法
-        class_addMethod(self, @selector(game), [self methodForSelector:sel], "V@:");
+        Method other = class_getInstanceMethod(self, @selector(game));
+
+        /**
+         *    第一个参数： cls:给哪个类添加方法
+         *    第二个参数： SEL name:添加方法的名称
+         *    第三个参数： IMP imp: 方法的实现，函数入口，函数名可与方法名不同（建议与方法名相同）
+         *    第四个参数： types :方法类型，需要用特定符号，参考API
+         */
+        class_addMethod(self, sel, method_getImplementation(other), "V@:");
+        
+      
+        
         return YES;
     }
-    
+
     return [super resolveInstanceMethod:sel];
 }
 
@@ -34,13 +45,27 @@
 {
     //询问其他对象处理sel
     Student *s = [[Student alloc] init];
-    
+
     if ([s respondsToSelector:aSelector])
     {
         return s;
     }
-    
+
     return [super forwardingTargetForSelector:aSelector];
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
+{
+    if (aSelector == @selector(swim))
+    {
+        /**signatureWithObjCTypes
+         *  void 返回值类型
+         *  @ _cmd
+         */
+        return [NSMethodSignature signatureWithObjCTypes:"v@:"];
+    }
+
+    return [super methodSignatureForSelector:aSelector];
 }
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation
@@ -52,19 +77,7 @@
     }
 }
 
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
-{
-    if (aSelector == @selector(swim))
-    {
-        /**signatureWithObjCTypes
-         void 返回值类型
-         @ _cmd
-         */
-        return [NSMethodSignature signatureWithObjCTypes:"v@:"];
-    }
-    
-    return [super methodSignatureForSelector:aSelector];
-}
+
 
 - (void)doesNotRecognizeSelector:(SEL)aSelector
 {

@@ -22,7 +22,7 @@
     
     
     People *p = [[People alloc] init];
-    [p performSelector:@selector(game) withObject:nil];
+    [p performSelector:@selector(test) withObject:nil];
     [p performSelector:@selector(learn) withObject:nil];
     [p performSelector:@selector(swim) withObject:nil];
 }

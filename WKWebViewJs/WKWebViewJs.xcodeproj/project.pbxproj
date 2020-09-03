@@ -16,6 +16,7 @@
 		C46C5D0722B72F9600FD75D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46C5D0522B72F9600FD75D0 /* LaunchScreen.storyboard */; };
 		C46C5D0A22B72F9600FD75D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C46C5D0922B72F9600FD75D0 /* main.m */; };
 		C46C5D1122B72FCD00FD75D0 /* indexIos.html in Resources */ = {isa = PBXBuildFile; fileRef = C46C5D1022B72FCD00FD75D0 /* indexIos.html */; };
+		C4D4E45A242211F400965B17 /* WKWebViewCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D4E459242211F400965B17 /* WKWebViewCacheViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		C46C5D0822B72F9600FD75D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46C5D0922B72F9600FD75D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C46C5D1022B72FCD00FD75D0 /* indexIos.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = indexIos.html; sourceTree = "<group>"; };
+		C4D4E458242211F400965B17 /* WKWebViewCacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewCacheViewController.h; sourceTree = "<group>"; };
+		C4D4E459242211F400965B17 /* WKWebViewCacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewCacheViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				C46C5CFB22B72F9500FD75D0 /* AppDelegate.m */,
 				C46C5CFD22B72F9500FD75D0 /* ViewController.h */,
 				C46C5CFE22B72F9500FD75D0 /* ViewController.m */,
+				C4D4E458242211F400965B17 /* WKWebViewCacheViewController.h */,
+				C4D4E459242211F400965B17 /* WKWebViewCacheViewController.m */,
 				C42857CC22B9D65000C880AF /* JSProtocol.h */,
 				C42857CD22B9D74B00C880AF /* MyJSObject.h */,
 				C42857CE22B9D74B00C880AF /* MyJSObject.m */,
@@ -157,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46C5CFF22B72F9500FD75D0 /* ViewController.m in Sources */,
+				C4D4E45A242211F400965B17 /* WKWebViewCacheViewController.m in Sources */,
 				C42857CF22B9D74B00C880AF /* MyJSObject.m in Sources */,
 				C46C5D0A22B72F9600FD75D0 /* main.m in Sources */,
 				C46C5CFC22B72F9500FD75D0 /* AppDelegate.m in Sources */,

@@ -46,6 +46,7 @@
 - (void)saleTickets
 {
     while (1) {
+        sleep(2);
         dispatch_semaphore_wait(_semaphore, DISPATCH_TIME_FOREVER); //可以使总信号量减1
         
         if (_tickets > 0)
@@ -76,8 +77,9 @@
     __block int num = 10;
     
     dispatch_async(queue, ^{
-        dispatch_semaphore_signal(semaphore);
+        sleep(2);
         num = 100;
+        dispatch_semaphore_signal(semaphore);
     });
     
     dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);

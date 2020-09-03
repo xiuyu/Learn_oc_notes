@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ConcurrentOperation.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -41,6 +42,13 @@
     
     
 
+    ConcurrentOperation *operation = [[ConcurrentOperation alloc] init];
+    
+//    [operation main];
+    
+    [operation start];
+    
+    
 
 }
 

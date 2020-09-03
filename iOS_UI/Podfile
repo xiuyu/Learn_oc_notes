@@ -9,5 +9,6 @@ target 'iOS_UI' do
   pod 'Masonry'
   pod 'YYKit'
   pod 'AFNetworking'
+  pod 'SocketRocket'
 
 end
