@@ -74,7 +74,7 @@
         NSLog(@"遍历%@",value);
     }];
     
-    ListNode *node =[ListNode reverse:n];
+    ListNode *node =[ListNode reverse2:n];
     
     NSLog(@"-------");
     [ListNode traverseLink:node block:^(id  _Nonnull value) {

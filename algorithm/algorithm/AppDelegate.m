@@ -24,6 +24,8 @@
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     return YES;
 }
 

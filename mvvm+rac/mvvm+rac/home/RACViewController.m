@@ -9,6 +9,7 @@
 #import "RACViewController.h"
 #import <ReactiveObjC.h>
 
+
 @interface RACViewController ()
 
 @property (strong, nonatomic) UITextField *userName;
@@ -53,6 +54,9 @@
     //    [self takeUitl];
     
     [self group];
+    
+    
+    
 }
 
 /**
@@ -78,6 +82,7 @@
     }];
     
     [self rac_liftSelector:@selector(updateUI:withB:) withSignals:sigalA, signalB, nil];
+
 }
 
 - (void)updateUI:(NSString *)data1 withB:(NSString *)data2
@@ -137,6 +142,9 @@
     [[signal throttle:1] subscribeNext:^(id _Nullable x) {
         NSLog(@"%@", x);
     }];
+
+    
+    
 }
 
 /**
@@ -157,6 +165,10 @@
     }] subscribeNext:^(id _Nullable x) {
         NSLog(@"%@", x);
     }];
+    
+    
+    
+
 }
 
 /**
@@ -201,6 +213,7 @@
     [[RACSignal merge:@[signalA, signalB]] subscribeNext:^(id _Nullable x) {
         NSLog(@"%@", x);
     }];
+
 }
 
 /**两个信号串联,两个管串联
@@ -223,6 +236,7 @@
     [[signalA concat:signalB] subscribeNext:^(id _Nullable x) {
         NSLog(@"%@", x);
     }];
+
 }
 
 /**
@@ -236,6 +250,7 @@
         
         return nil;
     }];
+    
     
     //当信号里面流的是唱歌.就改进为'跳舞'返还给self.value
     [[signal map:^id _Nullable (id _Nullable value) {
@@ -270,6 +285,7 @@
                    
                    NSLog(@"%ld", time);
                }];
+    
 }
 
 /**

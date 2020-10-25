@@ -23,6 +23,9 @@
 
 @property (strong, nonatomic) UIButton *loginBtn;
 
+
+@property (strong,nonatomic) UIView *redView;
+
 @property (strong, nonatomic) LoginViewModel *viewModel;
 
 @end
@@ -50,19 +53,26 @@
     @weakify(self)
     self.viewModel = [[LoginViewModel alloc] init];
     
+
+    
     //RAC(对象，对象的属性) = (一个信号);
     RAC(self.viewModel, smsCode) = [RACSignal merge:@[RACObserve(self.phonecodeText, text), self.phonecodeText.rac_textSignal]];
+    
     
     RAC(self.viewModel, mobileNo) = [RACSignal merge:@[RACObserve(self.phoneNumText, text), self.phoneNumText.rac_textSignal]];
     
     RAC(self.loginBtn, enabled) = self.viewModel.validLoginSignal;
-    
-    RAC(self.codeBtn, enabled) = self.viewModel.validCodeSignal;
-    
-    RAC(self.codeBtn, backgroundColor) = RACObserve(self.viewModel, codeBtnBackGroundColor);
     RAC(self.loginBtn, backgroundColor) = RACObserve(self.viewModel, loginBtnBackGroundColor);
     
+    RAC(self.codeBtn, enabled) = self.viewModel.validCodeSignal;
+    RAC(self.codeBtn, backgroundColor) = RACObserve(self.viewModel, codeBtnBackGroundColor);
+  
+    
+    
+    
     //    RAC(self.codeBtn, titleLabel.text) = RACObserve(self.viewModel, codeBtnTitile);
+    
+   
     
     [self.viewModel.changeTitleSignal subscribeNext:^(id _Nullable x) {
         [self.codeBtn setTitle:x forState:UIControlStateNormal | UIControlStateDisabled];
@@ -125,7 +135,71 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
     }];
+    
+
+  
+    
+    
+//
+//    RACSignal *bindSignal = [_phonecodeText.rac_textSignal bind:^RACStreamBindBlock{
+//          // block调用时刻:只要一个信号被绑定就会调用.表示信号绑定完成
+//
+//          NSLog(@"源信号被绑定");
+//          return ^RACStream *(id value, BOOL *stop){
+//              // RACStreamBindBlock什么时候调用:每次源信号发出内容,就会调用这个block
+//
+//              // value:源信号发出的内容
+//              NSLog(@"源信号发出的内容:%@",value);
+//
+//              // RACStreamBindBlock作用:在这个block处理源信号的内容
+//              value = [NSString stringWithFormat:@"xmg%@",value];
+//              // block返回值:信号(把处理完的值包装成一个信号,返回出去)
+//
+//              // 创建一个信号,并且这个信号的传递的值是我们处理完的值,value
+//              return [RACReturnSignal return:value];
+//          };
+//
+//      }];
+//
+//      // 订阅绑定信号,不在是源信号
+//      [bindSignal subscribeNext:^(id x) {
+//
+//          NSLog(@"%@",x);
+//      }];
+    
+//    [_phonecodeText.rac_textSignal bind:^RACSignal * _Nullable(^ _Nonnull) {
+//
+//        return  ^RACStream *(id value, BOOL *stop){
+//
+//            return [racretu];
+//        };
+//    }];
+    
+    
+    
+ 
+ 
+    [self test];
+
+  }
+
+
+-(void)test{
+    
+ 
+   
 }
+ 
+
+
+// 只要两个请求都请求完成的时候才会调用
+- (void)updateUI:(NSString *)data1 data2:(NSString *)data2
+{
+    NSLog(@"%@ %@",data1,data2);
+}
+
+
+
 
 - (void)setupUI
 {

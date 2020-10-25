@@ -24,7 +24,7 @@
     {
         //动态添加方法
         Method other = class_getInstanceMethod(self, @selector(game));
-
+    
         /**
          *    第一个参数： cls:给哪个类添加方法
          *    第二个参数： SEL name:添加方法的名称
@@ -32,8 +32,6 @@
          *    第四个参数： types :方法类型，需要用特定符号，参考API
          */
         class_addMethod(self, sel, method_getImplementation(other), "V@:");
-        
-      
         
         return YES;
     }
@@ -50,7 +48,6 @@
     {
         return s;
     }
-
     return [super forwardingTargetForSelector:aSelector];
 }
 
@@ -79,9 +76,10 @@
 
 
 
-- (void)doesNotRecognizeSelector:(SEL)aSelector
-{
+-(void)doesNotRecognizeSelector:(SEL)aSelector{
     [super doesNotRecognizeSelector:aSelector];
 }
+
+
 
 @end

@@ -41,6 +41,8 @@
     NSLog(@"hideIndicator");
 }
 
-- (void)showEmptyView {}
+- (void)showEmptyView {
+    
+}
 
 @end

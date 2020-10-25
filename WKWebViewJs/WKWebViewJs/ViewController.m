@@ -52,6 +52,8 @@
     self.webView.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.webView];
     
+    
+
 }
 
 #pragma WKScriptMessageHandler delegate

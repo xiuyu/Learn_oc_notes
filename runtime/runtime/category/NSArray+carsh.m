@@ -49,6 +49,7 @@
     {
         return [self swizzle_objectAtIndex:index];
     }
+
 }
 
 @end

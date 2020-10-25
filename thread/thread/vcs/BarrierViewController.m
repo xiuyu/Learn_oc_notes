@@ -58,6 +58,7 @@ static NSString *_name;
  */
 - (void)barrier
 {
+    
     dispatch_queue_t queue = dispatch_queue_create("concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
 
     dispatch_async(queue, ^{

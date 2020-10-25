@@ -80,7 +80,7 @@
         newHead = head;
         head = tmp;
     }
-    
+
     return newHead;
 }
 

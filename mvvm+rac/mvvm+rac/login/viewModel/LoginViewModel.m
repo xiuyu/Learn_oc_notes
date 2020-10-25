@@ -92,6 +92,7 @@ static const NSTimeInterval timeCountNum = 60;
                                  
                                  return @(code);
                              }] distinctUntilChanged];
+
 }
 
 /**

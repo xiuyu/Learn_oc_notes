@@ -31,7 +31,6 @@
     //变更队列的执行优先级
     dispatch_set_target_queue(queue, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0));
     
-    
     dispatch_async(queue, ^{
         NSLog(@"low任务1");
     });
